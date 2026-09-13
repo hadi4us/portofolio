@@ -34,7 +34,7 @@
   {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    "name": "RITMA — Realisasi, Target & Monitoring Anggaran",
+    "name": "RITMA — Sistem Informasi Realisasi, Target, dan Monitoring Anggaran",
     "description": "Sistem monitoring anggaran yang menghubungkan DPA, anggaran kas, SPJ, realisasi, kendala, dan laporan RFK.",
     "applicationCategory": "GovernmentApplication",
     "author": {
@@ -66,7 +66,7 @@
     <section class="project-hero">
       <div class="wrap">
         <div class="eyebrow">Proyek 04</div>
-        <h1>RITMA — Realisasi, Target &amp; <em>Monitoring Anggaran</em></h1>
+        <h1>RITMA — Sistem Informasi Realisasi, Target, dan <em>Monitoring Anggaran</em></h1>
         <p class="tagline">Sistem monitoring anggaran yang menghubungkan DPA, anggaran kas, SPJ, realisasi, kendala, dan laporan RFK.</p>
         <div class="hero-tags">
           <span class="hero-tag">APBD</span>
@@ -88,10 +88,10 @@
       <div class="wrap section-grid">
         <div>
           <div class="section-label">Masalah</div>
-          <h2>Monitoring anggaran tersebar dan sulit dipertanggungjawabkan</h2>
+          <h2>Data anggaran tersebar di banyak dokumen</h2>
         </div>
         <div class="problem-text">
-          <p>Pengelolaan anggaran daerah melibatkan banyak komponen: DPA, anggaran kas, sumber dana, SPJ, indikator, dan pelaporan RFK. Ketika data ini tersebar di berbagai dokumen dan sistem, <strong>realisasi anggaran sulit dipantau secara real-time</strong>.</p>
+          <p>Pengelolaan anggaran daerah melibatkan banyak komponen: DPA, anggaran kas, sumber dana, SPJ, indikator, dan pelaporan RFK. Ketika data tersebar di berbagai dokumen dan sistem, <strong>petugas perlu mencocokkan angka sebelum melihat posisi realisasi terbaru</strong>.</p>
           <p>Petugas keuangan menghabiskan waktu untuk merekonsiliasi data manual, sementara pimpinan tidak mendapat gambaran utuh tentang progres penyerapan dan kendala yang dihadapi.</p>
         </div>
       </div>
@@ -105,8 +105,8 @@
         </div>
         <div class="solution-text">
           <p>RITMA memusatkan <strong>master DPA, anggaran kas, sumber dana, indikator, PPTK, pelaksana, SPJ, dokumen, kendala, validasi, dan monitoring RFK</strong> dalam satu platform.</p>
-          <p>Realisasi hanya dihitung dari SPJ aktif berstatus "Diverifikasi" atau "Dibayar", memastikan angka realisasi dapat dipercaya dan dipertanggungjawabkan.</p>
-          <p>Mutasi memakai session token dan validasi role server-side. Penyimpanan SPJ memvalidasi total, kode DPA, pagu, dan mencatat audit trail — menjaga integritas data keuangan di setiap tahap.</p>
+          <p>Realisasi dihitung dari SPJ aktif berstatus "Diverifikasi" atau "Dibayar". SPJ yang belum mencapai status tersebut tidak masuk ke angka realisasi.</p>
+          <p>Setiap perubahan memakai session token dan pemeriksaan peran di server. Saat SPJ disimpan, sistem memeriksa total, kode DPA, dan pagu, lalu mencatat riwayat perubahannya.</p>
         </div>
       </div>
     </section>
@@ -153,7 +153,7 @@
     <section class="section tech-section">
       <div class="wrap">
         <div class="eyebrow">Prinsip Teknis</div>
-        <h2>Integritas keuangan dan akuntabilitas</h2>
+        <h2>Pemeriksaan sebelum data keuangan berubah</h2>
         <div class="tech-grid">
           <div class="tech-card">
             <div class="tech-num">01 / SESSION TOKEN</div>
@@ -163,7 +163,7 @@
           <div class="tech-card">
             <div class="tech-num">02 / ROLE VALIDATION</div>
             <h3>Validasi Role Server-Side</h3>
-            <p>Otorisasi diverifikasi di server, bukan hanya di tampilan — memastikan keamanan tidak bisa dilewati dari sisi klien.</p>
+            <p>Server memeriksa kewenangan pengguna pada setiap permintaan perubahan, bukan hanya menyembunyikan menu di layar.</p>
           </div>
           <div class="tech-card">
             <div class="tech-num">03 / AUDIT TRAIL</div>
@@ -192,16 +192,16 @@
     <section class="cta-section">
       <div class="wrap">
         <div class="cta-panel">
-          <h2>Tertarik tentang monitoring anggaran berbasis data?</h2>
-          <p>Untuk diskusi tentang transparansi keuangan daerah dan implementasi sistem monitoring anggaran, mari berdiskusi.</p>
-          <a class="button primary" href="mailto:hadi4us@gmail.com">Diskusikan proyek ini via email →</a>
+          <h2>Ingin membahas monitoring anggaran?</h2>
+          <p>Kirim email untuk bertukar pengalaman tentang pencatatan SPJ, realisasi, atau laporan RFK.</p>
+          <a class="button primary" href="mailto:hadi4us@gmail.com">Kirim email →</a>
           <a class="button secondary" href="../index.html#inovasi">Lihat proyek lain</a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer"><div class="wrap"><span>© <span id="year"></span> Nurhadi. Portofolio inovasi layanan publik.</span><span>Dibuat dengan fokus pada dampak, aksesibilitas, dan privasi.</span><span><a href="https://saweria.co/hadi4us" target="_blank" rel="noopener noreferrer">Dukung karya terbuka</a> · Dukungan sukarela, tidak terkait layanan atau tugas kedinasan.</span></div></footer>
+  <footer class="footer"><div class="wrap"><span>© <span id="year"></span> Nurhadi. Portofolio inovasi layanan publik.</span><span>Kode, tampilan, dan tulisan dikerjakan sebagai bagian dari praktik kerja saya.</span><span><a href="https://saweria.co/hadi4us" target="_blank" rel="noopener noreferrer">Dukung karya terbuka</a> · Dukungan sukarela, tidak terkait layanan atau tugas kedinasan.</span></div></footer>
   <script src="../assets/portfolio.js" defer></script>
 </body>
 </html>
