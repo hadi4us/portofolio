@@ -4,84 +4,65 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="RITMA — Sistem monitoring anggaran yang menghubungkan DPA, anggaran kas, SPJ, realisasi, kendala, dan laporan RFK.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="RITMA — Sistem Monitoring Anggaran Terpadu">
+  <meta property="og:description" content="Sistem monitoring anggaran yang menghubungkan DPA, anggaran kas, SPJ, realisasi, kendala, dan laporan RFK.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://hadi4us.github.io/portofolio/projects/ritma-anggaran.html">
+  <meta property="og:image" content="https://hadi4us.github.io/portofolio/og-image.png">
+  <meta property="og:locale" content="id_ID">
+  <meta property="og:site_name" content="Portofolio Nurhadi">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="RITMA — Sistem Monitoring Anggaran Terpadu">
+  <meta name="twitter:description" content="Sistem monitoring anggaran yang menghubungkan DPA, anggaran kas, SPJ, realisasi, kendala, dan laporan RFK.">
+  <meta name="twitter:image" content="https://hadi4us.github.io/portofolio/og-image.png">
+
+  <!-- Additional SEO -->
+  <link rel="canonical" href="https://hadi4us.github.io/portofolio/projects/ritma-anggaran.html">
+  <meta name="theme-color" content="#102236">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Nurhadi">
+
+  <!-- Favicon -->
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "RITMA — Realisasi, Target & Monitoring Anggaran",
+    "description": "Sistem monitoring anggaran yang menghubungkan DPA, anggaran kas, SPJ, realisasi, kendala, dan laporan RFK.",
+    "applicationCategory": "GovernmentApplication",
+    "author": {
+        "@type": "Person",
+        "name": "Nurhadi"
+    },
+    "url": "https://hadi4us.github.io/portofolio/projects/ritma-anggaran.html"
+}
+  </script>
+
   <title>RITMA — Realisasi, Target &amp; Monitoring Anggaran — Nurhadi</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
-  <style>
-    :root { --ink:#102236; --muted:#617083; --line:#dbe3e9; --paper:#f7f9fb; --white:#fff; --blue:#086b87; --blue-deep:#064e66; --aqua:#a7e5dd; --gold:#dcad46; --radius:18px; }
-    * { box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
-    body { margin:0; color:var(--ink); background:var(--paper); font:16px/1.6 "DM Sans",Arial,sans-serif; }
-    a { color:inherit; text-decoration:none; }
-    .wrap { max-width:1160px; margin:auto; padding:0 28px; }
-    .nav { height:76px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid rgba(16,34,54,.10); }
-    .brand { font-weight:700; letter-spacing:-.03em; font-size:1.18rem; }
-    .brand i { color:var(--blue); font-style:normal; }
-    .navlinks { display:flex; gap:25px; align-items:center; font-size:.9rem; color:#475769; }
-    .navlinks a:hover { color:var(--blue); }
-    .navlinks .contact { background:var(--ink); color:#fff; padding:9px 15px; border-radius:7px; }
-    .back-link { display:inline-flex; align-items:center; gap:6px; color:var(--blue); font-weight:600; font-size:.9rem; transition:.18s; }
-    .back-link:hover { color:var(--blue-deep); gap:10px; }
-    .project-hero { padding:80px 0 64px; position:relative; overflow:hidden; background:linear-gradient(115deg,#f7f9fb 0%,#eaf5f5 75%,#d5edeb 100%); }
-    .project-hero:after { content:""; position:absolute; width:610px; height:610px; right:-230px; top:-170px; border:1px solid rgba(8,107,135,.16); border-radius:50%; box-shadow:0 0 0 64px rgba(8,107,135,.05),0 0 0 128px rgba(8,107,135,.035); }
-    .eyebrow { color:var(--blue); font-size:.78rem; font-weight:700; text-transform:uppercase; letter-spacing:.13em; display:flex; align-items:center; gap:10px; }
-    .eyebrow:before { content:""; width:29px; height:2px; background:var(--gold); }
-    h1,h2,h3,p { margin-top:0; }
-    h1 { max-width:840px; margin:18px 0 22px; font:700 clamp(2.2rem,5vw,4rem)/1.05 "Source Serif 4",Georgia,serif; letter-spacing:-.045em; }
-    h1 em { color:var(--blue); font-style:normal; }
-    .tagline { max-width:620px; font-size:1.15rem; color:#475769; margin-bottom:0; }
-    .hero-tags { display:flex; flex-wrap:wrap; gap:8px; margin-top:18px; }
-    .hero-tag { background:rgba(8,107,135,.12); color:var(--blue-deep); padding:5px 12px; border-radius:6px; font-size:.8rem; font-weight:700; }
-    .section { padding:80px 0; }
-    .section.white { background:#fff; }
-    h2 { font:700 clamp(1.7rem,3vw,2.6rem)/1.1 "Source Serif 4",Georgia,serif; letter-spacing:-.04em; margin:0 0 20px; }
-    .section-grid { display:grid; grid-template-columns:1fr 1.3fr; gap:60px; align-items:start; }
-    .section-label { color:var(--blue); font-size:.78rem; font-weight:700; text-transform:uppercase; letter-spacing:.11em; margin-bottom:12px; }
-    .problem-text, .solution-text { color:var(--muted); font-size:1.04rem; line-height:1.7; }
-    .problem-text strong, .solution-text strong { color:var(--ink); }
-    .features-grid { display:grid; grid-template-columns:1fr 1fr; gap:28px; }
-    .feature { background:var(--white); border:1px solid var(--line); border-radius:var(--radius); padding:28px; transition:.18s; }
-    .feature:hover { border-color:var(--aqua); box-shadow:0 4px 20px rgba(8,107,135,.08); }
-    .feature-icon { width:42px; height:42px; background:linear-gradient(135deg,#e6f3f2,#d5edeb); border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:1.2rem; margin-bottom:14px; }
-    .feature h3 { font-size:1rem; margin:0 0 6px; }
-    .feature p { color:var(--muted); font-size:.9rem; margin:0; }
-    .tech-section { background:var(--ink); color:#edf5f5; }
-    .tech-section .eyebrow { color:var(--aqua); }
-    .tech-section h2 { color:#fff; }
-    .tech-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:30px; margin-top:36px; }
-    .tech-card { border-top:1px solid rgba(255,255,255,.15); padding-top:20px; }
-    .tech-card h3 { color:#fff; font-size:1rem; margin:0 0 6px; }
-    .tech-card p { color:#b4c4cd; font-size:.9rem; margin:0; }
-    .tech-num { color:var(--aqua); font-weight:700; font-size:.75rem; letter-spacing:.1em; margin-bottom:10px; }
-    .cta-section { text-align:center; padding:80px 0; }
-    .cta-panel { background:#e3f1ef; padding:48px 40px; border-radius:var(--radius); max-width:720px; margin:auto; }
-    .cta-panel h2 { font-size:2.2rem; }
-    .cta-panel p { color:#46616a; max-width:500px; margin:0 auto 24px; }
-    .button { display:inline-flex; min-height:46px; align-items:center; padding:0 19px; border-radius:7px; font-weight:700; font-size:.92rem; transition:.18s; }
-    .button.primary { background:var(--blue); color:#fff; }.button.primary:hover{background:var(--blue-deep);transform:translateY(-1px)}
-    .button.secondary { border:1px solid #aebdc7; color:var(--ink); margin-left:10px; }.button.secondary:hover{background:#fff}
-    .footer { padding:27px 0; background:#fff; border-top:1px solid var(--line); color:#718090; font-size:.82rem; }
-    .footer .wrap { display:flex; justify-content:space-between; gap:16px; }
-    @media(max-width:700px){
-      .wrap{padding:0 20px}.project-hero{padding:60px 0 48px}.section{padding:56px 0}
-      .section-grid{grid-template-columns:1fr;gap:28px}.features-grid{grid-template-columns:1fr}
-      .tech-grid{grid-template-columns:1fr}.cta-panel{padding:32px 24px}
-      .footer .wrap{display:block}.footer .wrap span{display:block;margin-top:5px}
-    }
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button,.feature{transition:none}}
-  </style>
+  <link rel="stylesheet" href="../assets/portfolio.css">
+  <link rel="stylesheet" href="../assets/project.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Lewati ke konten utama</a>
   <header class="wrap"><nav class="nav" aria-label="Navigasi">
     <a class="brand" href="../index.html">nurhadi<i>.</i></a>
     <div class="navlinks">
       <a class="back-link" href="../index.html">← Kembali ke portofolio</a>
-      <a class="contact" href="../index.html#kontak">Mari Berdiskusi</a>
+      <a class="contact" href="mailto:hadi4us@gmail.com">Mari Berdiskusi</a>
     </div>
   </nav></header>
 
-  <main>
+  <main id="main-content">
     <section class="project-hero">
       <div class="wrap">
         <div class="eyebrow">Proyek 04</div>
@@ -94,6 +75,14 @@
         </div>
       </div>
     </section>
+
+    <div class="project-meta">
+      <div class="wrap">
+        <div class="meta-item"><strong>Status:</strong> Aktif digunakan</div>
+        <div class="meta-item"><strong>Peran:</strong> Perancang & Pengembang</div>
+        <div class="meta-item"><strong>Platform:</strong> Google Apps Script, Google Sheets</div>
+      </div>
+    </div>
 
     <section class="section white">
       <div class="wrap section-grid">
@@ -128,32 +117,32 @@
         <h2>Komponen monitoring anggaran yang saling terhubung</h2>
         <div class="features-grid">
           <article class="feature">
-            <div class="feature-icon">📋</div>
+            <div class="feature-icon" aria-hidden="true">01</div>
             <h3>Master DPA & Anggaran Kas</h3>
             <p>Pengelolaan terpusat data DPA, anggaran kas, sumber dana, dan alokasi per kegiatan.</p>
           </article>
           <article class="feature">
-            <div class="feature-icon">💰</div>
+            <div class="feature-icon" aria-hidden="true">02</div>
             <h3>SPJ & Realisasi</h3>
             <p>Pencatatan SPJ dengan validasi total dan pagu. Realisasi hanya dari SPJ berstatus diverifikasi atau dibayar.</p>
           </article>
           <article class="feature">
-            <div class="feature-icon">📊</div>
+            <div class="feature-icon" aria-hidden="true">03</div>
             <h3>Dashboard Monitoring RFK</h3>
             <p>Visualisasi progres Rencana Fisik dan Keuangan untuk setiap kegiatan dan sub-kegiatan.</p>
           </article>
           <article class="feature">
-            <div class="feature-icon">⚠️</div>
+            <div class="feature-icon" aria-hidden="true">04</div>
             <h3>Pencatatan Kendala</h3>
             <p>Dokumentasi kendala pelaksanaan anggaran untuk analisis dan perbaikan di periode berikutnya.</p>
           </article>
           <article class="feature">
-            <div class="feature-icon">👥</div>
+            <div class="feature-icon" aria-hidden="true">05</div>
             <h3>Manajemen PPTK & Pelaksana</h3>
             <p>Penugasan dan pelacakan penanggung jawab per kegiatan untuk akuntabilitas yang jelas.</p>
           </article>
           <article class="feature">
-            <div class="feature-icon">📑</div>
+            <div class="feature-icon" aria-hidden="true">06</div>
             <h3>Dokumen & Indikator</h3>
             <p>Penyimpanan dokumen pendukung dan pencapaian indikator kinerja program.</p>
           </article>
@@ -205,14 +194,14 @@
         <div class="cta-panel">
           <h2>Tertarik tentang monitoring anggaran berbasis data?</h2>
           <p>Untuk diskusi tentang transparansi keuangan daerah dan implementasi sistem monitoring anggaran, mari berdiskusi.</p>
-          <a class="button primary" href="../index.html#kontak">Hubungi saya →</a>
-          <a class="button secondary" href="../index.html#inovasi">← Lihat proyek lain</a>
+          <a class="button primary" href="mailto:hadi4us@gmail.com">Diskusikan proyek ini via email →</a>
+          <a class="button secondary" href="../index.html#inovasi">Lihat proyek lain</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="footer"><div class="wrap"><span>© <span id="year"></span> Nurhadi. Portofolio inovasi layanan publik.</span><span>Dibuat dengan fokus pada dampak, aksesibilitas, dan privasi.</span></div></footer>
-  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+  <script src="../assets/portfolio.js" defer></script>
 </body>
 </html>

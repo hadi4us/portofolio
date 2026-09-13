@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://hadi4us.github.io/portofolio/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://hadi4us.github.io/portofolio/projects/simpel-surveilans.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hadi4us.github.io/portofolio/projects/cinta-imunisasi.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hadi4us.github.io/portofolio/projects/simonev.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hadi4us.github.io/portofolio/projects/ritma-anggaran.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hadi4us.github.io/portofolio/projects/ai-clinic.html</loc>
+    <priority>0.8</priority>
+  </url>
+</urlset>
