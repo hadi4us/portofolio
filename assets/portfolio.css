@@ -102,16 +102,15 @@ h2 { font:700 clamp(2rem,3.4vw,3.1rem)/1.05 "Source Serif 4",Georgia,serif; lett
 .contact-panel p { color:#46616a; max-width:500px; }
 
 /* ===== Footer ===== */
-.share-container { max-width:720px; margin:0 auto 24px; padding:22px 24px; border:1px solid var(--line); border-radius:var(--radius); background:var(--white); text-align:center; }
-.share-container p { margin:0 0 12px; color:var(--muted); font-size:.92rem; }
-.share-links { display:flex; flex-wrap:wrap; justify-content:center; gap:10px; }
-.share-links a { display:inline-block; padding:8px 14px; border:1px solid var(--line); border-radius:6px; color:var(--blue-deep); font-size:.86rem; font-weight:600; text-decoration:none; }
-.share-links a:hover, .share-links a:focus-visible { border-color:var(--blue); background:#eef7f6; }
-.share-native { display:inline-block; padding:8px 14px; border:1px solid var(--line); border-radius:6px; background:transparent; color:var(--blue-deep); font:600 .86rem inherit; cursor:pointer; }
-.share-native:hover, .share-native:focus-visible { border-color:var(--blue); background:#eef7f6; }
-
-.support-link { display:inline-block; padding:8px 12px; border-radius:6px; background:var(--aqua); color:var(--ink) !important; font-weight:700; text-decoration:none; }
-.support-link:hover, .support-link:focus-visible { background:#fff; }
+.share-container { max-width:720px; margin:0 auto 32px; text-align:center; }
+.share-container p { margin:0 0 12px; color:var(--muted); font-size:.9rem; }
+.share-actions { display:flex; flex-wrap:wrap; justify-content:center; gap:8px; }
+.share-native, .share-copy { display:inline-flex; align-items:center; padding:8px 14px; border:1px solid var(--line); border-radius:6px; background:var(--white); color:var(--blue-deep); font:600 .84rem inherit; cursor:pointer; transition:.18s; }
+.share-native { background:var(--blue); border-color:var(--blue); color:#fff; }
+.share-native:hover, .share-native:focus-visible { background:var(--blue-deep); border-color:var(--blue-deep); }
+.share-copy:hover, .share-copy:focus-visible { border-color:var(--blue); background:#eef7f6; }
+.support-link { color:var(--blue); font-weight:600; text-decoration:underline; text-underline-offset:3px; }
+.support-link:hover, .support-link:focus-visible { color:var(--blue-deep); }
 
 .footer { padding:27px 0; background:#fff; border-top:1px solid var(--line); color:#718090; font-size:.82rem; }
 .footer .wrap { display:flex; justify-content:space-between; gap:16px; }
