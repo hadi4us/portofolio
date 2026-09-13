@@ -107,6 +107,8 @@ h2 { font:700 clamp(2rem,3.4vw,3.1rem)/1.05 "Source Serif 4",Georgia,serif; lett
 .share-links { display:flex; flex-wrap:wrap; justify-content:center; gap:10px; }
 .share-links a { display:inline-block; padding:8px 14px; border:1px solid var(--line); border-radius:6px; color:var(--blue-deep); font-size:.86rem; font-weight:600; text-decoration:none; }
 .share-links a:hover, .share-links a:focus-visible { border-color:var(--blue); background:#eef7f6; }
+.share-native { display:inline-block; padding:8px 14px; border:1px solid var(--line); border-radius:6px; background:transparent; color:var(--blue-deep); font:600 .86rem inherit; cursor:pointer; }
+.share-native:hover, .share-native:focus-visible { border-color:var(--blue); background:#eef7f6; }
 
 .support-link { display:inline-block; padding:8px 12px; border-radius:6px; background:var(--aqua); color:var(--ink) !important; font-weight:700; text-decoration:none; }
 .support-link:hover, .support-link:focus-visible { background:#fff; }

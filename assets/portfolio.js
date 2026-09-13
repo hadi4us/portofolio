@@ -16,3 +16,23 @@ document.querySelectorAll('.work-toggle').forEach(function(btn) {
     }
   });
 });
+
+
+// Native share menu: includes Instagram and other installed apps when supported
+document.querySelectorAll('.share-native').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    var data = { title: btn.dataset.shareTitle, url: btn.dataset.shareUrl };
+    if (navigator.share) {
+      navigator.share(data).catch(function() {});
+      return;
+    }
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(data.url).then(function() {
+        btn.textContent = 'Tautan tersalin';
+        setTimeout(function() { btn.textContent = 'Aplikasi lain'; }, 1800);
+      });
+    } else {
+      window.prompt('Salin tautan ini:', data.url);
+    }
+  });
+});
