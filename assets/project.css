@@ -1,5 +1,13 @@
 /* ===== Project Detail Page Styles ===== */
 
+
+/* Breadcrumb navigation */
+.breadcrumb { display:flex; align-items:center; gap:8px; padding-top:18px; padding-bottom:18px; color:var(--muted); font-size:.88rem; }
+.breadcrumb a { color:var(--blue); font-weight:600; text-decoration:none; }
+.breadcrumb a:hover, .breadcrumb a:focus-visible { color:var(--blue-deep); text-decoration:underline; text-underline-offset:3px; }
+.breadcrumb-separator { color:#7f8c98; }
+.breadcrumb [aria-current="page"] { min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+
 /* Project Hero */
 .project-hero { padding:80px 0 64px; position:relative; overflow:hidden; background:linear-gradient(115deg,#f7f9fb 0%,#eaf5f5 75%,#d5edeb 100%); }
 .project-hero:after { content:""; position:absolute; width:610px; height:610px; right:-230px; top:-170px; border:1px solid rgba(8,107,135,.16); border-radius:50%; box-shadow:0 0 0 64px rgba(8,107,135,.05),0 0 0 128px rgba(8,107,135,.035); }
