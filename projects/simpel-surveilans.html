@@ -28,6 +28,7 @@
 
   <!-- Favicon -->
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="../site.webmanifest">
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -44,6 +45,26 @@
     "url": "https://hadi4us.github.io/portofolio/projects/simpel-surveilans.html"
 }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Portofolio",
+        "item": "https://hadi4us.github.io/portofolio/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "SIMPEL Surveilans",
+        "item": "https://hadi4us.github.io/portofolio/projects/simpel-surveilans.html"
+      }
+    ]
+  }
+  </script>
 
   <title>SIMPEL Surveilans — Nurhadi</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -52,7 +73,7 @@
   <link rel="stylesheet" href="../assets/portfolio.css">
   <link rel="stylesheet" href="../assets/project.css">
 </head>
-<body>
+<body data-asset-prefix="../">
   <a class="skip-link" href="#main-content">Lewati ke konten utama</a>
   <header class="wrap"><nav class="nav" aria-label="Navigasi">
     <a class="brand" href="../index.html">nurhadi<i>.</i></a>
@@ -61,6 +82,11 @@
       <a class="contact" href="mailto:hadi4us@gmail.com">Mari Berdiskusi</a>
     </div>
   </nav></header>
+  <nav class="breadcrumb wrap" aria-label="Breadcrumb">
+    <a href="../index.html">Portofolio</a>
+    <span class="breadcrumb-separator" aria-hidden="true">/</span>
+    <span aria-current="page">SIMPEL Surveilans</span>
+  </nav>
 
   <main id="main-content">
     <section class="project-hero">
@@ -92,7 +118,7 @@
         </div>
         <div class="problem-text">
           <p>Sistem surveilans penyakit mengandalkan pelaporan manual yang tersebar di berbagai fasyankes. Data sering terlambat, tidak lengkap, dan sulit divalidasi. Petugas kesehatan kesulitan mendapatkan gambaran utuh tentang tren penyakit untuk mengambil tindakan cepat.</p>
-          <p><strong>Akibatnya, respons terhadap potensi wabah menjadi lambat</strong> — dan keputusan diambil tanpa dasar data yang dapat dipercaya.</p>
+          <p><strong>Akibatnya, petugas terlambat melihat perubahan pola kasus</strong> dan perlu memeriksa ulang data sebelum bertindak.</p>
         </div>
       </div>
     </section>
@@ -104,9 +130,9 @@
           <h2>Satu alur kerja dari pelaporan hingga tindak lanjut</h2>
         </div>
         <div class="solution-text">
-          <p>SIMPEL Surveilans menjadikan <strong>PD3I sebagai sumber kebenaran data</strong>. Modul SARS menangani pelaporan mingguan termasuk zero reporting, sehingga setiap fasyankes tetap terpantau meskipun tidak ada kasus.</p>
-          <p>Dashboard menyajikan tren dan ringkasan secara real-time. Modul PIE hanya menghasilkan sinyal untuk ditindaklanjuti — bukan diagnosis, sehingga petugas dapat fokus pada verifikasi dan respons.</p>
-          <p>Alur MPOX mendukung pencatatan pajanan, pemeriksaan, verifikasi, dan handoff ke proses Penyelidikan Epidemiologi (PE), memastikan setiap kasus tercatat dan ditindaklanjuti secara sistematis.</p>
+          <p>Dalam SIMPEL Surveilans, <strong>PD3I menjadi sumber data utama</strong>. Modul SARS menangani pelaporan mingguan termasuk zero reporting, sehingga setiap fasyankes tetap terpantau meskipun tidak ada kasus.</p>
+          <p>Dashboard menyajikan tren dan ringkasan data terbaru. Modul PIE memberi sinyal untuk diperiksa, bukan menetapkan diagnosis.</p>
+          <p>Alur MPOX mencatat pajanan, pemeriksaan, dan verifikasi sebelum data diteruskan ke proses Penyelidikan Epidemiologi (PE).</p>
         </div>
       </div>
     </section>
@@ -119,7 +145,7 @@
           <article class="feature">
             <div class="feature-icon" aria-hidden="true">01</div>
             <h3>Dashboard Surveilans</h3>
-            <p>Tren penyakit dan ringkasan data real-time untuk pengambilan keputusan cepat di tingkat wilayah.</p>
+            <p>Tren penyakit dan ringkasan data terbaru untuk membantu petugas menentukan tindak lanjut di tingkat wilayah.</p>
           </article>
           <article class="feature">
             <div class="feature-icon" aria-hidden="true">02</div>
@@ -133,8 +159,8 @@
           </article>
           <article class="feature">
             <div class="feature-icon" aria-hidden="true">04</div>
-            <h3>Alur MPOX End-to-End</h3>
-            <p>Pencatatan pajanan, pemeriksaan, verifikasi, hingga handoff ke proses PE dalam satu alur terintegrasi.</p>
+            <h3>Alur MPOX</h3>
+            <p>Pajanan, pemeriksaan, dan verifikasi dicatat sebelum kasus diteruskan ke proses PE.</p>
           </article>
           <article class="feature">
             <div class="feature-icon" aria-hidden="true">05</div>
@@ -153,7 +179,7 @@
     <section class="section tech-section">
       <div class="wrap">
         <div class="eyebrow">Prinsip Teknis</div>
-        <h2>Keamanan dan integritas data sebagai fondasi</h2>
+        <h2>Cara sistem menjaga akses dan riwayat data</h2>
         <div class="tech-grid">
           <div class="tech-card">
             <div class="tech-num">01 / SESSION TOKEN</div>
@@ -168,7 +194,7 @@
           <div class="tech-card">
             <div class="tech-num">03 / AUDIT TRAIL</div>
             <h3>Jejak Audit Lengkap</h3>
-            <p>Setiap perubahan data tercatat secara permanen untuk akuntabilitas dan penelusuran jika terjadi ketidaksesuaian.</p>
+            <p>Sistem mencatat perubahan data agar petugas dapat menelusuri siapa yang mengubahnya dan kapan perubahan terjadi.</p>
           </div>
           <div class="tech-card">
             <div class="tech-num">04 / DATA SENSITIF</div>
@@ -191,17 +217,25 @@
 
     <section class="cta-section">
       <div class="wrap">
+        <div class="share-container">
+          <p>Bagikan halaman ini</p>
+          <div class="share-actions">
+            <button type="button" class="share-native" data-share-title="SIMPEL Surveilans" data-share-url="https://hadi4us.github.io/portofolio/projects/simpel-surveilans.html">Bagikan</button>
+            <button type="button" class="share-copy" data-share-url="https://hadi4us.github.io/portofolio/projects/simpel-surveilans.html">Salin tautan</button>
+          </div>
+        </div>
         <div class="cta-panel">
-          <h2>Tertarik berdiskusi tentang surveilans digital?</h2>
-          <p>Untuk diskusi lebih lanjut tentang sistem ini atau potensi replikasi di wilayah lain, silakan hubungi saya.</p>
-          <a class="button primary" href="mailto:hadi4us@gmail.com">Diskusikan proyek ini via email →</a>
+          <h2>Ingin membahas sistem surveilans ini?</h2>
+          <p>Kirim email untuk bertukar pengalaman atau membahas penerapan alur serupa di wilayah lain.</p>
+          <a class="button primary" href="mailto:hadi4us@gmail.com">Kirim email →</a>
           <a class="button secondary" href="../index.html#inovasi">Lihat proyek lain</a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer"><div class="wrap"><span>© <span id="year"></span> Nurhadi. Portofolio inovasi layanan publik.</span><span>Dibuat dengan fokus pada dampak, aksesibilitas, dan privasi.</span><span><a href="https://saweria.co/hadi4us" target="_blank" rel="noopener noreferrer">Dukung karya terbuka</a> · Dukungan sukarela, tidak terkait layanan atau tugas kedinasan.</span></div></footer>
+  <footer class="footer"><div class="wrap"><span>© <span id="year"></span> Nurhadi. Portofolio inovasi layanan publik.</span><span>Kode, tampilan, dan tulisan dikerjakan sebagai bagian dari praktik kerja saya.</span><span><a class="support-link" href="https://saweria.co/hadi4us" target="_blank" rel="noopener noreferrer">Dukung karya Saya</a></span></div></footer>
   <script src="../assets/portfolio.js" defer></script>
+  <script src="../assets/consent.js" defer></script>
 </body>
 </html>
