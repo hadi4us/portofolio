@@ -102,6 +102,9 @@ h2 { font:700 clamp(2rem,3.4vw,3.1rem)/1.05 "Source Serif 4",Georgia,serif; lett
 .contact-panel p { color:#46616a; max-width:500px; }
 
 /* ===== Footer ===== */
+.support-link { display:inline-block; padding:8px 12px; border-radius:6px; background:var(--aqua); color:var(--ink) !important; font-weight:700; text-decoration:none; }
+.support-link:hover, .support-link:focus-visible { background:#fff; }
+
 .footer { padding:27px 0; background:#fff; border-top:1px solid var(--line); color:#718090; font-size:.82rem; }
 .footer .wrap { display:flex; justify-content:space-between; gap:16px; }
 

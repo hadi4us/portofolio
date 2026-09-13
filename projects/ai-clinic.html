@@ -67,7 +67,7 @@
       <div class="wrap">
         <div class="eyebrow">Proyek 05</div>
         <h1>AI Clinic Owner <em>Copilot</em></h1>
-        <p class="tagline">Fondasi data warehouse dan dashboard untuk membantu pemilik klinik memahami operasi, keuangan, persediaan, klaim, dan pertumbuhan.</p>
+        <p class="tagline">Gudang data dan dashboard untuk membaca kegiatan klinik, keuangan, persediaan, serta klaim dalam satu tempat.</p>
         <div class="hero-tags">
           <span class="hero-tag">Klinik</span>
           <span class="hero-tag">Finance Intelligence</span>
@@ -88,11 +88,11 @@
       <div class="wrap section-grid">
         <div>
           <div class="section-label">Masalah</div>
-          <h2>Pemilik klinik tidak punya visibilitas operasional yang utuh</h2>
+          <h2>Data operasional klinik berada di banyak tempat</h2>
         </div>
         <div class="problem-text">
           <p>Klinik menghasilkan data dari berbagai sumber: kunjungan pasien, tindakan medis, resep, pendapatan, biaya operasional, persediaan obat, klaim BPJS, dan pajak. Namun data ini sering tersimpan terpisah dalam spreadsheet, sistem berbeda, atau bahkan catatan manual.</p>
-          <p><strong>Tanpa pandangan terpadu, pemilik klinik mengambil keputusan bisnis berdasarkan intuisi</strong> — bukan data yang dapat dipercaya tentang profitabilitas, arus kas, dan tren pertumbuhan.</p>
+          <p><strong>Pemilik klinik perlu menyatukan data itu lebih dulu</strong> sebelum dapat membaca biaya, arus kas, persediaan, atau perubahan jumlah kunjungan.</p>
         </div>
       </div>
     </section>
@@ -101,12 +101,12 @@
       <div class="wrap section-grid">
         <div>
           <div class="section-label">Solusi</div>
-          <h2>Data warehouse klinik dengan intelligence layer</h2>
+          <h2>Gudang data untuk laporan operasional klinik</h2>
         </div>
         <div class="solution-text">
           <p>Sistem mengimpor CSV/Excel, menormalisasi data kunjungan, tindakan, resep, pendapatan, biaya, persediaan, BPJS, pajak, dan imunisasi, lalu menghasilkan <strong>KPI harian/bulanan, laporan finansial, peringatan, serta rekomendasi COA berbasis aturan</strong>.</p>
-          <p>Arsitektur tenant-aware menjaga pemisahan data klinik, mencatat audit, menyamarkan identitas pasien, dan menyediakan control plane untuk provisioning, health check, backup, serta deployment.</p>
-          <p><strong>Fitur AI hanya menjadi bantuan analisis</strong> — data dan status traceability tetap menjadi dasar keputusan. Tidak ada "kotak hitam" dalam rekomendasi yang dihasilkan.</p>
+          <p>Arsitektur multi-klinik memisahkan data tiap klinik. Sistem juga mencatat aktivitas, menyamarkan identitas pasien, dan menyediakan panel untuk membuat tenant, memeriksa layanan, mencadangkan data, serta menjalankan deployment.</p>
+          <p><strong>Fitur AI membantu membaca data, bukan mengambil keputusan.</strong> Setiap rekomendasi menyimpan rujukan ke data dan aturan yang digunakan.</p>
         </div>
       </div>
     </section>
@@ -114,7 +114,7 @@
     <section class="section white">
       <div class="wrap">
         <div class="section-label">Fitur Utama</div>
-        <h2>Dari data mentah ke keputusan bisnis</h2>
+        <h2>Fungsi pengolahan dan pelaporan data</h2>
         <div class="features-grid">
           <article class="feature">
             <div class="feature-icon" aria-hidden="true">01</div>
@@ -158,7 +158,7 @@
           <div class="tech-card">
             <div class="tech-num">01 / TENANT-AWARE</div>
             <h3>Isolasi Data per Klinik</h3>
-            <p>Arsitektur multi-tenant memastikan data setiap klinik terisolasi sepenuhnya dari klinik lain.</p>
+            <p>Setiap permintaan membawa konteks tenant, dan server membatasi kueri ke klinik tersebut.</p>
           </div>
           <div class="tech-card">
             <div class="tech-num">02 / DATA MASKING</div>
@@ -178,7 +178,7 @@
           <div class="tech-card">
             <div class="tech-num">05 / TRACEABILITY</div>
             <h3>AI Transparan</h3>
-            <p>Fitur AI hanya membantu analisis. Setiap rekomendasi dapat ditelusuri ke data sumber — tidak ada "kotak hitam".</p>
+            <p>Setiap rekomendasi mencantumkan data sumber dan aturan yang dipakai agar hasilnya dapat diperiksa.</p>
           </div>
           <div class="tech-card">
             <div class="tech-num">06 / BACKUP</div>
@@ -191,17 +191,26 @@
 
     <section class="cta-section">
       <div class="wrap">
+        <div class="share-container">
+          <p>Bagikan halaman ini:</p>
+          <div class="share-links">
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fhadi4us.github.io%2Fportofolio%2Fprojects%2Fai-clinic.html" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhadi4us.github.io%2Fportofolio%2Fprojects%2Fai-clinic.html" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a href="https://wa.me/?text=AI%20Clinic%20Owner%20Copilot%20-%20https%3A%2F%2Fhadi4us.github.io%2Fportofolio%2Fprojects%2Fai-clinic.html" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            <a href="mailto:?subject=AI%20Clinic%20Owner%20Copilot&body=https%3A%2F%2Fhadi4us.github.io%2Fportofolio%2Fprojects%2Fai-clinic.html">Email</a>
+          </div>
+        </div>
         <div class="cta-panel">
-          <h2>Tertarik tentang data intelligence untuk klinik?</h2>
-          <p>Untuk diskusi tentang data warehouse klinik, finance intelligence, atau implementasi AI yang bertanggung jawab, mari berdiskusi.</p>
-          <a class="button primary" href="mailto:hadi4us@gmail.com">Diskusikan proyek ini via email →</a>
+          <h2>Ingin membahas pengelolaan data klinik?</h2>
+          <p>Kirim email untuk membahas gudang data, laporan keuangan, atau penggunaan AI yang dapat ditelusuri.</p>
+          <a class="button primary" href="mailto:hadi4us@gmail.com">Kirim email →</a>
           <a class="button secondary" href="../index.html#inovasi">Lihat proyek lain</a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer"><div class="wrap"><span>© <span id="year"></span> Nurhadi. Portofolio inovasi layanan publik.</span><span>Dibuat dengan fokus pada dampak, aksesibilitas, dan privasi.</span><span><a href="https://saweria.co/hadi4us" target="_blank" rel="noopener noreferrer">Dukung karya terbuka</a> · Dukungan sukarela, tidak terkait layanan atau tugas kedinasan.</span></div></footer>
+  <footer class="footer"><div class="wrap"><span>© <span id="year"></span> Nurhadi. Portofolio inovasi layanan publik.</span><span>Kode, tampilan, dan tulisan dikerjakan sebagai bagian dari praktik kerja saya.</span><span><a class="support-link" href="https://saweria.co/hadi4us" target="_blank" rel="noopener noreferrer">Dukung karya terbuka di Saweria</a> · Dukungan sukarela, tidak terkait layanan atau tugas kedinasan.</span></div></footer>
   <script src="../assets/portfolio.js" defer></script>
 </body>
 </html>
