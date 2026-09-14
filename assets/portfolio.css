@@ -100,6 +100,7 @@ h2 { font:700 clamp(2rem,3.4vw,3.1rem)/1.05 "Source Serif 4",Georgia,serif; lett
 .contact-panel { background:#e3f1ef; padding:40px; border-radius:var(--radius); }
 .contact-panel h2 { font-size:2.5rem; }
 .contact-panel p { color:#46616a; max-width:500px; }
+.contact-actions { display:flex; flex-wrap:wrap; align-items:center; gap:14px; margin-top:22px; }
 
 /* ===== Footer ===== */
 .share-container { max-width:720px; margin:0 auto 32px; text-align:center; }
