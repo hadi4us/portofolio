@@ -28,6 +28,7 @@
 
   <!-- Favicon -->
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="../site.webmanifest">
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -44,6 +45,26 @@
     "url": "https://hadi4us.github.io/portofolio/projects/ai-clinic.html"
 }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Portofolio",
+        "item": "https://hadi4us.github.io/portofolio/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "AI Clinic Owner Copilot",
+        "item": "https://hadi4us.github.io/portofolio/projects/ai-clinic.html"
+      }
+    ]
+  }
+  </script>
 
   <title>AI Clinic Owner Copilot — Nurhadi</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -52,7 +73,7 @@
   <link rel="stylesheet" href="../assets/portfolio.css">
   <link rel="stylesheet" href="../assets/project.css">
 </head>
-<body>
+<body data-asset-prefix="../">
   <a class="skip-link" href="#main-content">Lewati ke konten utama</a>
   <header class="wrap"><nav class="nav" aria-label="Navigasi">
     <a class="brand" href="../index.html">nurhadi<i>.</i></a>
@@ -61,6 +82,11 @@
       <a class="contact" href="mailto:hadi4us@gmail.com">Mari Berdiskusi</a>
     </div>
   </nav></header>
+  <nav class="breadcrumb wrap" aria-label="Breadcrumb">
+    <a href="../index.html">Portofolio</a>
+    <span class="breadcrumb-separator" aria-hidden="true">/</span>
+    <span aria-current="page">AI Clinic Owner Copilot</span>
+  </nav>
 
   <main id="main-content">
     <section class="project-hero">
@@ -191,6 +217,13 @@
 
     <section class="cta-section">
       <div class="wrap">
+        <div class="share-container">
+          <p>Bagikan halaman ini</p>
+          <div class="share-actions">
+            <button type="button" class="share-native" data-share-title="AI Clinic Owner Copilot" data-share-url="https://hadi4us.github.io/portofolio/projects/ai-clinic.html">Bagikan</button>
+            <button type="button" class="share-copy" data-share-url="https://hadi4us.github.io/portofolio/projects/ai-clinic.html">Salin tautan</button>
+          </div>
+        </div>
         <div class="cta-panel">
           <h2>Ingin membahas pengelolaan data klinik?</h2>
           <p>Kirim email untuk membahas gudang data, laporan keuangan, atau penggunaan AI yang dapat ditelusuri.</p>
@@ -201,7 +234,8 @@
     </section>
   </main>
 
-  <footer class="footer"><div class="wrap"><span>© <span id="year"></span> Nurhadi. Portofolio inovasi layanan publik.</span><span>Kode, tampilan, dan tulisan dikerjakan sebagai bagian dari praktik kerja saya.</span><span><a href="https://saweria.co/hadi4us" target="_blank" rel="noopener noreferrer">Dukung karya terbuka</a> · Dukungan sukarela, tidak terkait layanan atau tugas kedinasan.</span></div></footer>
+  <footer class="footer"><div class="wrap"><span>© <span id="year"></span> Nurhadi. Portofolio inovasi layanan publik.</span><span><a class="support-link" href="https://saweria.co/hadi4us" target="_blank" rel="noopener noreferrer">Dukung karya Saya</a> · Dukungan sukarela melalui Saweria.co</span></div></footer>
   <script src="../assets/portfolio.js" defer></script>
+  <script src="../assets/consent.js" defer></script>
 </body>
 </html>

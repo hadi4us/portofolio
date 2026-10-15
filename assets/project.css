@@ -1,5 +1,13 @@
 /* ===== Project Detail Page Styles ===== */
 
+
+/* Breadcrumb navigation */
+.breadcrumb { display:flex; align-items:center; gap:8px; padding-top:18px; padding-bottom:18px; color:var(--muted); font-size:.88rem; }
+.breadcrumb a { color:var(--blue); font-weight:600; text-decoration:none; }
+.breadcrumb a:hover, .breadcrumb a:focus-visible { color:var(--blue-deep); text-decoration:underline; text-underline-offset:3px; }
+.breadcrumb-separator { color:#7f8c98; }
+.breadcrumb [aria-current="page"] { min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+
 /* Project Hero */
 .project-hero { padding:80px 0 64px; position:relative; overflow:hidden; background:linear-gradient(115deg,#f7f9fb 0%,#eaf5f5 75%,#d5edeb 100%); }
 .project-hero:after { content:""; position:absolute; width:610px; height:610px; right:-230px; top:-170px; border:1px solid rgba(8,107,135,.16); border-radius:50%; box-shadow:0 0 0 64px rgba(8,107,135,.05),0 0 0 128px rgba(8,107,135,.035); }
@@ -44,6 +52,21 @@ h2 { font:700 clamp(1.7rem,3vw,2.6rem)/1.1 "Source Serif 4",Georgia,serif; lette
 .tech-card h3 { color:#fff; font-size:1rem; margin:0 0 6px; }
 .tech-card p { color:#b4c4cd; font-size:.9rem; margin:0; }
 .tech-num { color:var(--aqua); font-weight:700; font-size:.75rem; letter-spacing:.1em; margin-bottom:10px; }
+
+/* Share and support */
+.support-banner { max-width:720px; margin:40px auto 0; padding:24px; border-radius:var(--radius); background:#f7f9fb; border:1px solid var(--line); text-align:center; }
+.support-banner p { margin:0 0 16px; color:var(--muted); font-size:.92rem; }
+.support-link { color:var(--blue); font-weight:600; text-decoration:underline; text-underline-offset:3px; }
+.support-link:hover, .support-link:focus-visible { color:var(--blue-deep); }
+
+.share-container { max-width:720px; margin:0 auto 32px; text-align:center; }
+.share-container p { margin:0 0 12px; color:var(--muted); font-size:.9rem; }
+.share-actions { display:flex; flex-wrap:wrap; justify-content:center; gap:8px; }
+.share-native, .share-copy { display:inline-flex; align-items:center; padding:8px 14px; border:1px solid var(--line); border-radius:6px; background:var(--white); color:var(--blue-deep); font:600 .84rem inherit; cursor:pointer; transition:.18s; }
+.share-native { background:var(--blue); border-color:var(--blue); color:#fff; }
+.share-native:hover, .share-native:focus-visible { background:var(--blue-deep); border-color:var(--blue-deep); }
+.share-copy:hover, .share-copy:focus-visible { border-color:var(--blue); background:#eef7f6; }
+
 
 /* CTA */
 .cta-section { text-align:center; padding:80px 0; }

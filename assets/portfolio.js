@@ -16,3 +16,36 @@ document.querySelectorAll('.work-toggle').forEach(function(btn) {
     }
   });
 });
+
+// Native share menu: includes installed apps such as Instagram when supported
+document.querySelectorAll('.share-native').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    var data = { title: btn.dataset.shareTitle, url: btn.dataset.shareUrl };
+    if (navigator.share) {
+      navigator.share(data).catch(function() {});
+      return;
+    }
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(data.url).then(function() {
+        btn.textContent = 'Tautan tersalin';
+        setTimeout(function() { btn.textContent = 'Bagikan'; }, 1800);
+      });
+    } else {
+      window.prompt('Salin tautan ini:', data.url);
+    }
+  });
+});
+
+document.querySelectorAll('.share-copy').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    var url = btn.dataset.shareUrl;
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(url).then(function() {
+        btn.textContent = 'Tautan tersalin';
+        setTimeout(function() { btn.textContent = 'Salin tautan'; }, 1800);
+      });
+    } else {
+      window.prompt('Salin tautan ini:', url);
+    }
+  });
+});
