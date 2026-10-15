@@ -13,11 +13,56 @@
     window.gtag('js', new Date());
     window.gtag('consent', 'default', { analytics_storage: 'granted' });
     window.gtag('config', measurementId, { anonymize_ip: true });
+    enableInteractionTracking();
 
     const script = document.createElement('script');
     script.async = true;
     script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
     document.head.appendChild(script);
+  }
+
+  function track(eventName, parameters = {}) {
+    if (!window.__portfolioAnalyticsLoaded || typeof window.gtag !== 'function') return;
+    window.gtag('event', eventName, parameters);
+  }
+
+  function projectName(link) {
+    const work = link.closest('.work');
+    return work?.querySelector('h3')?.textContent.trim() || 'Proyek portofolio';
+  }
+
+  function enableInteractionTracking() {
+    if (window.__portfolioInteractionTrackingEnabled) return;
+    window.__portfolioInteractionTrackingEnabled = true;
+
+    document.addEventListener('click', (event) => {
+      const link = event.target.closest('a');
+      if (!link) return;
+      const href = link.getAttribute('href') || '';
+      const label = link.textContent.trim();
+
+      if (link.classList.contains('detail-link')) {
+        track('select_content', {
+          content_type: 'project_detail',
+          item_name: projectName(link),
+          link_location: 'portfolio_list'
+        });
+      } else if (href.startsWith('mailto:')) {
+        track('generate_lead', {
+          lead_type: 'email',
+          link_location: link.closest('footer') ? 'footer' : 'contact_section'
+        });
+      } else if (href.includes('saweria.co')) {
+        track('support_link_click', {
+          link_location: link.closest('footer') ? 'footer' : 'page_content'
+        });
+      } else if (link.closest('.share-links')) {
+        track('share', {
+          method: label || 'social',
+          content_type: 'portfolio'
+        });
+      }
+    });
   }
 
   function dismissBanner() {
