@@ -123,10 +123,12 @@ h2 { font:700 clamp(2rem,3.4vw,3.1rem)/1.05 "Source Serif 4",Georgia,serif; lett
 /* ===== Responsive ===== */
 @media(max-width:700px){
   .wrap { padding:0 20px; }
-  .navlinks a:not(.contact):not(.back-link) { display:none; }
+  .nav { height:auto; min-height:76px; gap:12px; }
+  .navlinks { gap:8px; max-width:72%; overflow-x:auto; padding:8px 0; scrollbar-width:none; }
+  .navlinks::-webkit-scrollbar { display:none; }
+  .navlinks a { flex:0 0 auto; font-size:.78rem; white-space:nowrap; }
+  .navlinks .contact { padding:8px 10px; }
   .navlinks .back-link { display:inline-flex !important; }
-  .navlinks { gap:12px; }
-  .navlinks .contact { padding:8px 10px; font-size:.8rem; }
   .hero { min-height:auto; padding:73px 0 62px; }
   .hero-note { margin-top:55px; }
   .section { padding:64px 0; }

@@ -1,5 +1,28 @@
+// Shared navigation keeps portfolio, project, and insight pages in one hierarchy.
+(function() {
+  var nav = document.querySelector('.nav');
+  if (!nav) return;
+  var inProject = window.location.pathname.indexOf('/projects/') !== -1;
+  var isHome = /(?:^|\/)index\.html?$/.test(window.location.pathname) || window.location.pathname.endsWith('/portofolio/');
+  var root = inProject ? '../' : '';
+  var home = root + 'index.html';
+  nav.querySelector('.brand').setAttribute('href', home + (isHome ? '#beranda' : ''));
+  var links = [
+    ['Karya', home + '#inovasi'],
+    ['Cara kerja', home + '#pendekatan'],
+    ['Tentang', home + '#tentang'],
+    ['Wawasan', root + 'asisten-ai.html'],
+    ['Kontak', home + '#kontak']
+  ];
+  var linksEl = nav.querySelector('.navlinks');
+  if (!linksEl) return;
+  linksEl.innerHTML = links.map(function(item, i) {
+    return '<a' + (i === 4 ? ' class="contact"' : '') + ' href="' + item[1] + '">' + item[0] + '</a>';
+  }).join('');
+})();
+
 // Year
-document.getElementById('year').textContent = new Date().getFullYear();
+ document.getElementById('year').textContent = new Date().getFullYear();
 
 // Accordion toggle for work items
 document.querySelectorAll('.work-toggle').forEach(function(btn) {
