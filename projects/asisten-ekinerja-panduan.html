@@ -1,2 +1,151 @@
 <!doctype html>
-<html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Panduan penggunaan Asisten e-Kinerja: pemasangan, format sumber, Google Sheets, Excel/CSV, dan pemeriksaan hasil."><meta name="robots" content="index,follow"><link rel="canonical" href="https://hadi4us.github.io/portofolio/projects/asisten-ekinerja-panduan.html"><link rel="icon" href="../favicon.svg" type="image/svg+xml"><title>Panduan Asisten e-Kinerja — Nurhadi</title><link rel="stylesheet" href="../assets/portfolio.css"><link rel="stylesheet" href="../assets/project.css"><style>.guide{max-width:860px;padding:70px 0 90px}.guide h1{font:700 clamp(2.5rem,5vw,4rem)/1.05 "Source Serif 4",Georgia,serif;letter-spacing:-.05em}.guide h2{margin-top:44px}.guide h3{margin-top:28px}.guide p,.guide li{color:var(--muted);line-height:1.7}.guide li{margin:8px 0}.guide code{background:#eef4f5;padding:2px 5px}.guide .notice{padding:18px 20px;background:#fff8e8;border-left:4px solid #d4952f;color:#5b4a27}.guide .table-wrap{overflow-x:auto}.guide table{border-collapse:collapse;min-width:680px;width:100%}.guide th,.guide td{border:1px solid var(--line);padding:9px;text-align:left}.guide th{background:#f3f7f8}</style></head><body><a class="skip-link" href="#main-content">Lewati ke konten utama</a><header class="wrap"><nav class="nav" aria-label="Navigasi"><a class="brand" href="../index.html">nurhadi<i>.</i></a><div class="navlinks"><a class="back-link" href="asisten-ekinerja.html">← Ringkasan</a><a class="contact" href="mailto:hadi4us@gmail.com">Kontak</a></div></nav></header><main id="main-content" class="wrap guide"><div class="eyebrow">Asisten e-Kinerja · Versi 0.5.6</div><h1>Panduan penggunaan</h1><p>Gunakan panduan ini untuk menyiapkan sumber kegiatan, menjalankan pengisian, dan menangani hasil yang perlu diperiksa. Pengguna tetap login sendiri ke <code>https://kinerja.bkn.go.id/</code>.</p><nav aria-label="Daftar isi"><ul><li><a href="#pasang">Persiapan dan pemasangan</a></li><li><a href="#format">Format sumber A:H</a></li><li><a href="#jalan">Menjalankan proses</a></li><li><a href="#google">Google Sheets dan laporan</a></li><li><a href="#masalah">Masalah umum</a></li></ul></nav><h2 id="pasang">1. Persiapan dan pemasangan</h2><ol><li>Login sendiri ke aplikasi BKN, lalu buka halaman yang memuat SKP dan periode yang benar.</li><li>Pasang ekstensi dari Chrome Web Store hanya bila tautan listing resmi sudah tersedia. Saat ini tautan listing belum dicantumkan di portofolio.</li><li>Untuk uji coba pengembangan, ekstrak ZIP, buka <code>chrome://extensions</code>, aktifkan Mode developer, pilih Load unpacked, lalu pilih folder yang berisi <code>manifest.json</code>.</li><li>Klik ikon Asisten e-Kinerja. Periksa SKP, periode, akun, dan tanggal sebelum memulai.</li></ol><div class="notice">Jangan kirim password, token, API key, atau credential kepada pengelola. Ekstensi tidak meminta password BKN atau Google.</div><h2 id="format">2. Format sumber A:H</h2><p>Satu baris berarti satu kegiatan aktual. Tujuh kolom A:G wajib; H direkomendasikan untuk status selesai.</p><div class="table-wrap"><table><thead><tr><th>Header</th><th>Isi</th></tr></thead><tbody><tr><td><code>tanggal</code></td><td>YYYY-MM-DD, DD/MM/YYYY, atau tanggal Excel</td></tr><tr><td><code>rencana_aksi</code></td><td>Nama pilihan Rencana Aksi BKN</td></tr><tr><td><code>kegiatan</code></td><td>Nama kegiatan harian</td></tr><tr><td><code>mulai</code> / <code>selesai</code></td><td>Jam HH:MM; selesai setelah mulai</td></tr><tr><td><code>realisasi</code></td><td>Angka nol atau positif</td></tr><tr><td><code>bukti</code></td><td>Tautan HTTPS</td></tr><tr><td><code>selesai_rencana_aksi</code></td><td><code>YA</code> atau <code>TIDAK</code>; kosong berarti TIDAK</td></tr></tbody></table></div><p>File dibatasi maksimal 20 MB dan 10.000 kegiatan. Rumus Excel perlu ditempel sebagai Values. Jam lintas tengah malam tidak didukung. Gunakan <code>YA</code> hanya pada kegiatan terakhir dari Rencana Aksi yang sama.</p><h2 id="jalan">3. Menjalankan proses</h2><ol><li>Pilih Google Sheets atau Excel/CSV. Alternatif tersedia melalui tempelan A1:H.</li><li>Pilih rentang: semua, satu hari, tujuh hari, satu bulan, tiga bulan, atau pilihan sendiri.</li><li>Periksa ringkasan sumber, SKP, periode, dan tahun bila periode ambigu.</li><li>Centang pernyataan bahwa SKP, periode, dan kegiatan sudah diperiksa.</li><li>Klik <strong>Mulai / Lanjutkan otomatis</strong>. Biarkan tab BKN terbuka dan jangan mengedit formulir bersamaan.</li><li>Gunakan Jeda bila perlu. Setelah Simpan dikirim, alat tetap memeriksa hasil.</li><li>Popup selesai merangkum kegiatan baru dan kegiatan yang sudah cocok. Ringkasan bukan persetujuan atasan atau penetapan nilai.</li></ol><h2 id="google">4. Google Sheets dan laporan</h2><ol><li>Siapkan tab <code>Data</code> dengan header A1:H1.</li><li>Buka Pengaturan lanjutan → Hubungkan Google. Akun perlu memiliki akses ke spreadsheet.</li><li>Masukkan tautan spreadsheet dan nama tab, lalu klik Ambil / Perbarui data.</li><li>Tautan dan nama tab terakhir disimpan lokal di profil browser. Setelah spreadsheet berubah, ambil data ulang.</li><li>CSV dapat diunduh dari Pengaturan lanjutan. Tab laporan Google adalah snapshot baru dan memerlukan izin tulis serta akses edit.</li></ol><p>Izin baca menggunakan <code>https://www.googleapis.com/auth/spreadsheets.readonly</code>. Pembuatan tab laporan opsional menggunakan scope tulis <code>https://www.googleapis.com/auth/spreadsheets</code>. Cakupan izin Google tidak berarti hanya satu tab.</p><h2 id="masalah">5. Masalah umum</h2><ul><li><strong>Spreadsheet tidak terbaca:</strong> periksa akun, tautan, nama tab, akses, dan header.</li><li><strong>Periode ambigu:</strong> periksa formulir dan pilih tahun pada Pengaturan lanjutan.</li><li><strong>Kartu tidak cocok:</strong> tunggu daftar tanggal selesai dimuat; jangan langsung menganggap kegiatan belum tersimpan.</li><li><strong>Hasil Simpan belum pasti:</strong> buka kartu di BKN. Pilih “Sudah tersimpan, lewati” hanya setelah memeriksa.</li><li><strong>Panel sesi lama:</strong> muat ulang ekstensi dan tab BKN dengan Ctrl+Shift+R.</li><li><strong>Checkbox H diubah:</strong> perubahan sumber tidak memperbarui kegiatan lama secara otomatis. Periksa kartu lama langsung di BKN.</li></ul><p><a href="asisten-ekinerja.html">← Kembali ke ringkasan</a> · <a href="asisten-ekinerja-privasi.html">Kebijakan privasi</a> · <a href="asisten-ekinerja-ketentuan.html">Ketentuan penggunaan</a></p></main><footer class="footer"><div class="wrap"><span>© <span id="year"></span> Nurhadi.</span><span><a href="mailto:hadi4us@gmail.com">hadi4us@gmail.com</a></span></div></footer><script src="../assets/portfolio.js" defer></script></body></html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Panduan Asisten e-Kinerja v0.5.9: hubungkan Google Sheets, gunakan Excel/CSV, siapkan template A:H, pilih tanggal, dan jalankan input kinerja harian ASN.">
+<meta name="robots" content="index,follow">
+<meta name="author" content="Nurhadi">
+<meta name="theme-color" content="#163b65">
+<link rel="canonical" href="https://otomasikantor.web.id/projects/asisten-ekinerja-panduan.html">
+<meta property="og:title" content="Panduan Asisten e-Kinerja — Nurhadi">
+<meta property="og:description" content="Mulai dari sumber kegiatan hingga pemeriksaan hasil, dengan panduan koneksi Google dan pemecahan masalah.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://otomasikantor.web.id/projects/asisten-ekinerja-panduan.html">
+<meta property="og:locale" content="id_ID">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<title>Panduan Asisten e-Kinerja v0.5.9 — Nurhadi</title>
+<link rel="stylesheet" href="../assets/portfolio.css">
+<link rel="stylesheet" href="../assets/project.css">
+<style>
+.guide{max-width:960px;padding-top:64px;padding-bottom:80px}
+.guide h1{font:700 clamp(2.5rem,6vw,4.4rem)/1.08 "Source Serif 4",Georgia,serif;letter-spacing:-.05em;max-width:800px}
+.guide h2{font-size:clamp(1.7rem,3.4vw,2.4rem);margin:0 0 18px;line-height:1.15}
+.guide h3{font-size:1.1rem;margin:26px 0 10px;line-height:1.4}
+.guide p,.guide li{color:var(--muted);line-height:1.75}
+.guide li{margin:9px 0}.guide strong{color:var(--ink)}
+.guide a:not(.button){color:var(--blue-deep);text-decoration:underline;text-underline-offset:3px}
+.guide code{font-size:.85em;background:#edf2f7;padding:3px 6px;border-radius:4px;overflow-wrap:anywhere}
+.guide section{margin-top:40px;padding-top:8px;scroll-margin-top:24px}
+.meta{font-size:.83rem;color:var(--muted);margin-bottom:24px}
+.lead{max-width:750px;font-size:1.08rem}
+.quickstart{padding:26px;background:linear-gradient(120deg,#163b65,#245d91);border-radius:18px;margin:28px 0;color:white}
+.quickstart h2{font:700 1.5rem/1.2 "DM Sans",Arial,sans-serif;color:white}
+.quickstart p,.quickstart li,.quickstart strong{color:#e5effb}
+.quickstart ol{margin-bottom:0;padding-left:22px}
+.toc{background:white;border:1px solid var(--line);border-radius:14px;padding:22px;margin:28px 0}
+.toc ul{display:grid;grid-template-columns:1fr 1fr;gap:7px 24px;list-style:none;margin:12px 0 0;padding:0}
+.toc li{margin:0;font-size:.92rem}
+.notice{padding:17px 20px;background:#fff8e8;border-left:4px solid #d4952f;color:#5b4a27;border-radius:0 9px 9px 0;margin:20px 0}
+.guide .notice p{color:#5b4a27;margin:0}
+.note{padding:17px 20px;background:#eaf2fb;border-left:4px solid #447db7;border-radius:0 9px 9px 0;margin:18px 0}
+.note p{margin:0}.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px;margin:18px 0}
+.guide table{border-collapse:collapse;min-width:640px;width:100%;background:white;font-size:.91rem}
+.guide th,.guide td{border-bottom:1px solid var(--line);padding:12px 13px;text-align:left;vertical-align:top}
+.guide th{background:#edf3f8;color:#294964}.guide tr:last-child td{border-bottom:0}
+.guide caption{text-align:left;padding:12px 13px;font-weight:600;color:var(--ink)}
+.checklist{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 22px}
+.checklist ul{padding-left:20px;margin:0}
+.guide details{border:1px solid var(--line);background:white;border-radius:10px;margin:12px 0;padding:16px 20px}
+.guide summary{cursor:pointer;font-weight:600;color:var(--ink);line-height:1.5}
+.guide details p:last-child{margin-bottom:0}
+.bottom-links{display:flex;flex-wrap:wrap;gap:12px 22px;padding-top:24px;border-top:1px solid var(--line);margin-top:42px;font-size:.9rem}
+@media(max-width:600px){.guide{padding-top:38px;padding-bottom:48px}.toc ul{grid-template-columns:1fr}.quickstart{padding:21px}.guide ol{padding-left:22px}.guide th,.guide td{padding:10px}.guide details{padding:14px 16px}}
+@media print{header,.toc,.bottom-links,.footer{display:none}.guide{padding:0;max-width:none}.guide details{break-inside:avoid}.quickstart{background:#edf3f8;color:#102236}.quickstart h2,.quickstart li,.quickstart strong{color:#102236}}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Lewati ke konten utama</a>
+<header class="wrap"><nav class="nav" aria-label="Navigasi"><a class="brand" href="../index.html">nurhadi<i>.</i></a><div class="navlinks"><a class="back-link" href="asisten-ekinerja.html">← Ringkasan</a><a class="contact" href="mailto:hadi4us@gmail.com">Kontak</a></div></nav></header>
+<main id="main-content" class="wrap guide">
+<div class="eyebrow">Asisten e-Kinerja · Panduan pengguna</div>
+<h1>Siapkan kegiatan.<br>Hubungkan. Jalankan.</h1>
+<p class="lead">Panduan pengisian kinerja harian ASN melalui Google Sheets atau Excel/CSV. Pilih sumber, periksa SKP dan rentang tanggal, lalu jalankan dari panel ekstensi pada halaman e-Kinerja BKN.</p>
+<p class="meta">Versi acuan <strong>0.5.9</strong> · Diperbarui <time datetime="2026-10-18">18 Oktober 2026</time>. Versi yang tersedia di Web Store dapat berbeda selama pembaruan ditinjau.</p>
+<div class="quickstart">
+<h2>Sudah memasang ekstensi?</h2>
+<ol><li>Buka dan login ke <strong>e-Kinerja BKN</strong>, lalu klik ikon ekstensi saat tab BKN aktif.</li><li>Pilih <strong>Google Sheets</strong>. Jika diminta, klik <strong>Hubungkan Google</strong> dan berikan izin baca. Akun yang masih terhubung tidak mendapat dialog koneksi lagi.</li><li>Masukkan tautan dan nama tab, klik <strong>Ambil data kegiatan</strong>, pilih rentang, lalu centang pernyataan pemeriksaan dan klik <strong>Mulai / lanjutkan</strong>.</li></ol>
+</div>
+<div class="actions"><a class="button primary" href="https://kinerja.bkn.go.id/skp" target="_blank" rel="noopener noreferrer">Buka e-Kinerja BKN ↗</a><a class="button secondary" href="#format">Lihat format template</a></div>
+<nav class="toc" aria-label="Daftar isi panduan"><strong>Pilih bagian yang Anda butuhkan</strong><ul><li><a href="#pasang">1. Pemasangan dan persiapan</a></li><li><a href="#google">2. Menghubungkan Google Sheets</a></li><li><a href="#excel">3. Menggunakan Excel/CSV</a></li><li><a href="#format">4. Format template A:H</a></li><li><a href="#jalan">5. Menjalankan dan memeriksa hasil</a></li><li><a href="#laporan">6. Laporan dan pengaturan</a></li><li><a href="#masalah">7. Masalah umum</a></li><li><a href="#pengelola">8. Catatan untuk pengelola</a></li></ul></nav>
+
+<section aria-labelledby="pasang">
+<h2 id="pasang">1. Pemasangan dan persiapan</h2>
+<ol><li>Pasang <strong>Asisten Input e-Kinerja</strong> dari listing Chrome Web Store yang dibagikan pengelola. Pastikan nama ekstensi dan pengembangnya sesuai. Jika sudah terpasang, periksa nomor versi pada panel.</li><li>Login sendiri ke <a href="https://kinerja.bkn.go.id/" target="_blank" rel="noopener noreferrer">aplikasi e-Kinerja BKN</a>. Buka SKP yang ingin diisi.</li><li>Klik ikon ekstensi <strong>pada tab BKN yang aktif</strong>. Ekstensi mencoba membuka menu SKP dan formulir Isi Kinerja Harian; pilih sendiri SKP/periode jika halaman meminta pilihan.</li><li>Jika ikon diklik di luar situs BKN, halaman mulai akan tampil. Klik <strong>Buka e-Kinerja BKN</strong>, lalu klik kembali ikon pada tab tersebut.</li></ol>
+<div class="note"><p><strong>Pengguna tidak perlu membuat proyek Google Cloud, OAuth Client ID, atau mengubah manifest.json.</strong> Konfigurasi aplikasi disiapkan oleh pengelola. Setiap pengguna hanya menghubungkan akun Google miliknya jika ingin membaca Sheets secara langsung.</p></div>
+<p>Periksa akun BKN, nama SKP, periode penilaian, dan kegiatan aktual. Gunakan satu instalasi ekstensi dan satu proses aktif untuk target SKP yang sama.</p>
+</section>
+
+<section aria-labelledby="google">
+<h2 id="google">2. Menghubungkan Google Sheets</h2>
+<ol><li>Siapkan spreadsheet mengikuti <a href="#format">format A:H</a>. Nama tab bawaan adalah <code>Data</code>; jika berbeda, gunakan nama tab yang sebenarnya.</li><li>Di bagian <strong>Sumber kegiatan</strong>, pilih <strong>Google Sheets</strong>. Ekstensi memeriksa sesi tanpa membuka persetujuan Google.</li><li>Jika sesi belum tersedia, dialog <strong>Hubungkan akun Google</strong> muncul. Klik <strong>Hubungkan Google</strong>, ikuti alur Google, lalu berikan izin baca. Tombol <strong>Nanti saja</strong> menutup dialog agar Anda dapat memilih sumber lain.</li><li>Pastikan status berubah menjadi <strong>Terhubung</strong>. Masukkan tautan spreadsheet dan <strong>Nama tab</strong> di panel, lalu klik <strong>Ambil data kegiatan</strong>.</li><li>Periksa jumlah kegiatan dan tanggal yang terbaca sebelum melanjutkan.</li></ol>
+<p>Tautan dan nama tab terakhir disimpan otomatis pada profil browser tersebut, tetapi tetap dapat diganti. Jika isi spreadsheet berubah, ambil ulang data. Akun Google harus memiliki akses ke file; spreadsheet tidak perlu dibuat publik atau dibagikan kepada pengembang.</p>
+<p>Jika sesi masih tersedia, dialog tidak muncul lagi saat panel dibuka. Jika izin dicabut atau sesi tidak dapat diperbarui, hubungkan kembali. Persetujuan Google tetap merupakan langkah pengguna dan tidak dilewati oleh ekstensi.</p>
+<div class="notice"><p><strong>Cakupan izin:</strong> izin baca Google berlaku untuk spreadsheet yang dapat diakses akun, bukan hanya satu file. Ekstensi membaca A:H pada lembar yang Anda pilih. Pembuatan tab laporan meminta izin tulis tambahan secara terpisah.</p></div>
+</section>
+
+<section aria-labelledby="excel">
+<h2 id="excel">3. Menggunakan Excel/CSV</h2>
+<ol><li>Pilih <strong>Excel / CSV</strong> pada Sumber kegiatan.</li><li>Pilih file <code>.xlsx</code>, <code>.csv</code>, atau <code>.tsv</code> dengan header baku. Data akan dibaca setelah file dipilih.</li><li>Periksa jumlah kegiatan, rentang tanggal, dan pratinjau. Jika file diperbarui, pilih ulang file terbaru.</li></ol>
+<p>Alternatif tanpa OAuth: buka <strong>Pengaturan lanjutan → Tempel data Google Sheets tanpa OAuth</strong>, salin A1:H beserta header, tempel, lalu klik <strong>Gunakan data tempelan</strong>. Excel/CSV dan tempelan tidak memerlukan koneksi Google.</p>
+</section>
+
+<section aria-labelledby="format">
+<h2 id="format">4. Format template A:H</h2>
+<p>Gunakan satu baris untuk satu kegiatan aktual. Letakkan header pada baris pertama dan pertahankan urutan berikut. Tujuh kolom A:G wajib; H opsional dan direkomendasikan.</p>
+<div class="table-wrap" role="region" aria-label="Format kolom template" tabindex="0">
+<table><caption>Kolom sumber kegiatan</caption><thead><tr><th scope="col">Kolom</th><th scope="col">Header</th><th scope="col">Isi / contoh</th></tr></thead><tbody>
+<tr><th scope="row">A</th><td><code>tanggal</code></td><td><code>2026-10-19</code>, <code>19/10/2026</code>, atau nilai tanggal Excel/Sheets.</td></tr>
+<tr><th scope="row">B</th><td><code>rencana_aksi</code></td><td>Nama lengkap Rencana Aksi yang tersedia pada formulir BKN.</td></tr>
+<tr><th scope="row">C</th><td><code>kegiatan</code></td><td>Nama kegiatan harian yang benar-benar dilaksanakan.</td></tr>
+<tr><th scope="row">D</th><td><code>mulai</code></td><td><code>08:00</code> dalam format 24 jam.</td></tr>
+<tr><th scope="row">E</th><td><code>selesai</code></td><td><code>09:00</code>, harus setelah jam mulai pada hari yang sama.</td></tr>
+<tr><th scope="row">F</th><td><code>realisasi</code></td><td>Angka nol atau positif, misalnya <code>1</code>. Sesuaikan dengan satuan dan validasi pada BKN.</td></tr>
+<tr><th scope="row">G</th><td><code>bukti</code></td><td>Tautan HTTPS ke bukti dukung sebenarnya, misalnya file Google Drive.</td></tr>
+<tr><th scope="row">H</th><td><code>selesai_rencana_aksi</code></td><td><code>YA</code> untuk mencentang Selesai Rencana Aksi Periode Ini; <code>TIDAK</code> atau kosong untuk tidak mencentang.</td></tr>
+</tbody></table></div>
+<ul><li>Maksimal <strong>20 MB</strong> per sumber dan <strong>10.000 kegiatan</strong>. Hindari baris kosong di tengah data dan header tambahan di atas tabel.</li><li>Untuk file Excel dengan rumus, gunakan salinan nilai hasil perhitungan (<em>Paste values</em>) agar data yang dibaca sesuai.</li><li>Jam lintas tengah malam tidak didukung. Pengisian tidak otomatis mengecualikan akhir pekan; isi sumber hanya dengan tanggal kegiatan yang benar.</li><li>Kolom H juga menerima <code>TRUE/FALSE</code> dan <code>1/0</code>. Gunakan <code>YA</code> hanya pada kegiatan terakhir secara kronologis dari Rencana Aksi yang sama dalam sumber.</li><li>Perubahan baris atau checklist pada sumber tidak memperbarui kegiatan lama di BKN secara otomatis.</li></ul>
+</section>
+
+<section aria-labelledby="jalan">
+<h2 id="jalan">5. Menjalankan dan memeriksa hasil</h2>
+<div class="checklist"><strong>Sebelum klik Mulai</strong><ul><li>Data sudah terbaca dan seluruh kolom wajib terisi.</li><li>Akun, SKP, serta periode BKN sesuai dengan tanggal sumber.</li><li>Rencana Aksi, Realisasi, jam, dan tautan bukti sudah diperiksa.</li></ul></div>
+<ol><li>Di <strong>Rentang kegiatan</strong>, pilih semua data, 1 hari, 7 hari, 1 bulan, 3 bulan, atau rentang sendiri. Periksa tanggal <strong>Dari</strong> dan <strong>Sampai</strong>.</li><li>Periksa ringkasan periode dan pratinjau. Jika tahun ambigu, isi tahun penilaian pada Pengaturan lanjutan.</li><li>Centang pernyataan pemeriksaan, lalu klik <strong>Mulai / lanjutkan</strong>.</li><li>Biarkan tab BKN terbuka. Jangan mengubah formulir, berpindah SKP, atau menjalankan instalasi lain bersamaan.</li></ol>
+<p>Ekstensi mencocokkan ulang seluruh data sumber yang berada dalam periode aktif, lalu memproses rentang pilihan. Kartu yang cocok secara unik dilewati. Sebelum kegiatan baru diisi, daftar tanggal diperiksa kembali. Tombol Simpan ditekan otomatis dan kartu hasilnya diperiksa.</p>
+<p>Gunakan <strong>Jeda</strong> untuk meminta berhenti. Permintaan simpan yang sudah dikirim tetap diperiksa. Tombol <strong>Tutup</strong> saat proses aktif meminta jeda dan menunggu pemeriksaan langkah aktif selesai; tombol minus hanya mengecilkan panel.</p>
+<p>Popup <strong>Proses selesai</strong> menampilkan jumlah kegiatan baru disimpan dan kegiatan yang sudah ada lalu dilewati. Ringkasan ini <strong>bukan persetujuan atasan atau penetapan nilai SKP</strong>.</p>
+<div class="notice"><p>Jika hasil belum pasti, proses berhenti untuk pemeriksaan. Jangan langsung mengirim ulang. Periksa kartu BKN sebelum memilih <strong>Sudah tersimpan, lewati</strong> atau <strong>Dipastikan belum tersimpan, izinkan coba lagi</strong>. Bukti dukung dan status checklist tidak diperiksa ulang melalui kartu hasil.</p></div>
+</section>
+
+<section aria-labelledby="laporan">
+<h2 id="laporan">6. Laporan dan pengaturan</h2>
+<ul><li><strong>Unduh status CSV:</strong> tersedia di Pengaturan lanjutan untuk menyimpan laporan status sumber.</li><li><strong>Buat tab status di Google Sheets:</strong> opsional untuk sumber yang dibaca melalui koneksi Google. Berikan izin tulis dan pastikan akun memiliki akses edit, lalu buat laporan. Hasilnya adalah tab baru bertanda waktu pada spreadsheet yang sama, bukan pembaruan status terus-menerus pada kolom sumber.</li><li><strong>Putuskan sesi Google:</strong> menghapus cache sesi lokal. Untuk mencabut izin aplikasi pada akun, gunakan <a href="https://myaccount.google.com/connections" target="_blank" rel="noopener noreferrer">pengaturan koneksi akun Google</a>.</li><li><strong>Pemeriksaan, kalibrasi, dan uji satu kegiatan:</strong> tersedia di Pengaturan lanjutan jika diperlukan. Penggunaan normal tidak memerlukan pemetaan ulang kolom template.</li></ul>
+<p>Menghapus ekstensi tidak menghapus kegiatan yang sudah disimpan di BKN, spreadsheet sumber, atau tab laporan yang sudah dibuat.</p>
+</section>
+
+<section aria-labelledby="masalah">
+<h2 id="masalah">7. Masalah umum</h2>
+<details><summary>Halaman konfigurasi Google Cloud muncul setelah instalasi</summary><p>Pengguna tidak perlu mengonfigurasi Google Cloud. Pada versi lama, klik ikon di luar tab BKN dapat membuka halaman konfigurasi. Buka e-Kinerja, login, lalu klik ikon dari tab BKN. Versi baru menyediakan halaman mulai; konfigurasi pengembang berada dalam bagian terpisah yang tertutup.</p></details>
+<details><summary>Client ID ditolak Google / OAUTH_CLIENT_INVALID</summary><p>Masalah ini perlu diperiksa pengelola. Kirim versi ekstensi, ID instalasi dari <code>chrome://extensions</code>, dan cara memasang: Web Store atau Load unpacked. Jangan membuat Client ID sendiri. Jika menggunakan paket manual, gunakan paket terbaru dengan public key dari pengelola. Status OAuth “under review” saja belum membuktikan penyebab error ini.</p></details>
+<details><summary>Google belum memverifikasi aplikasi atau akses diblokir</summary><p>Verifikasi OAuth terpisah dari publikasi Chrome Web Store. Ikuti informasi yang ditampilkan Google dan laporkan pesan lengkap kepada pengelola. Akun instansi dapat dibatasi administrator. Sementara itu, gunakan Excel/CSV atau tempelan data tanpa OAuth.</p></details>
+<details><summary>Spreadsheet tidak terbaca atau akses ditolak</summary><p>Periksa akun Google yang digunakan, akses ke file, tautan, ejaan nama tab, dan header A:H. Jika sumber berubah, ambil ulang data. Jika sesi berakhir atau izin dicabut, hubungkan kembali. Jangan menjadikan spreadsheet publik hanya untuk mengatasi masalah koneksi.</p></details>
+<details><summary>Periode SKP atau kolom belum dikenali</summary><p>Pastikan formulir Isi Kinerja Harian terbuka pada SKP/periode yang tepat. Periksa tahun sumber dan gunakan tahun penilaian opsional jika ambigu. Pada Pengaturan lanjutan, gunakan Baca ulang periode, Gunakan SKP di halaman ini, atau Periksa kolom sesuai kebutuhan.</p></details>
+<details><summary>Daftar kartu belum lengkap atau hasil simpan belum pasti</summary><p>Tunggu halaman BKN selesai memuat, lalu periksa daftar kegiatan pada tanggal yang dimaksud. Alat tidak menyimpulkan berhasil dari klik Simpan saja. Jangan memilih “belum tersimpan” sebelum memeriksa, karena pengiriman ulang dapat membuat duplikasi.</p></details>
+<details><summary>Checklist selesai berubah pada spreadsheet, tetapi kegiatan lama tetap sama</summary><p>Kolom H mengatur checklist saat input baru. Ekstensi tidak mengedit kegiatan lama secara otomatis. Jika kegiatan lama cocok tetapi checklist tidak dapat dipastikan, periksa dan sesuaikan langsung pada aplikasi BKN.</p></details>
+<details><summary>Panel masih menampilkan versi lama</summary><p>Periksa versi di <code>chrome://extensions</code>, lalu muat ulang halaman BKN. Untuk instalasi manual, perbarui seluruh isi paket dan klik Muat ulang. Jika berganti ID ekstensi, pengaturan dan catatan lokal lama tidak berpindah otomatis. Hindari dua instalasi aktif.</p></details>
+<p>Butuh bantuan? Kirim versi, cara instalasi, urutan langkah, dan pesan error ke <a href="mailto:hadi4us@gmail.com">hadi4us@gmail.com</a>. Samarkan data pribadi pada tangkapan layar. Jangan mengirim password, token akses, Client Secret, atau private key.</p>
+</section>
+
+<section aria-labelledby="pengelola">
+<h2 id="pengelola">8. Catatan untuk pengelola</h2>
+<p>Bagian ini untuk pengembang atau pengelola distribusi. Pengguna umum cukup mengikuti langkah koneksi di atas.</p>
+<details><summary>Pengujian instalasi manual dan identitas OAuth</summary><ol><li>Ekstrak paket pengelola, buka <code>chrome://extensions</code>, aktifkan Mode developer, lalu pilih <strong>Load unpacked</strong> dan folder yang langsung berisi <code>manifest.json</code>.</li><li>Paket v0.5.9 menyertakan public key Web Store untuk menjaga identitas instalasi manual. ID yang diharapkan: <code>aeejcjojjeigdhfpkhmmdmjdnnkfplha</code>.</li><li>Pastikan OAuth client berjenis Chrome Extension, Item ID cocok dengan ID instalasi, dan Client ID di paket sama dengan client pada proyek Google Cloud yang benar.</li><li>Jika ID berbeda, nonaktifkan instalasi lama sebelum menguji paket baru. Simpan ekspor catatan jika diperlukan; penyimpanan lokal mengikuti ID ekstensi.</li><li>Uji koneksi Google dan satu kegiatan sebelum memperluas pengujian. Public key menjaga identitas; keberhasilan otorisasi tetap bergantung pada konfigurasi dan kebijakan Google.</li></ol></details>
+<details><summary>Pembaruan Web Store dan verifikasi Google</summary><p>Unggah paket dengan nomor versi lebih tinggi pada item Web Store yang sama. Jika draf sedang ditinjau, batalkan peninjauan draf untuk mengunggah perbaikan, lalu ajukan kembali. Jangan menggunakan Rollback untuk mengunggah paket baru.</p><p>Selesaikan verifikasi OAuth pada proyek pemilik Client ID yang digunakan paket, deklarasikan izin yang benar-benar diminta, dan jaga kesesuaian homepage serta kebijakan privasi dengan domain yang diverifikasi. Status In production tidak sama dengan persetujuan verifikasi.</p></details>
+</section>
+<div class="notice"><p>Asisten e-Kinerja dikembangkan secara independen oleh <strong>Nurhadi — ASN Kota Depok</strong>, tidak berafiliasi dengan atau mewakili BKN. Pengguna tetap bertanggung jawab atas kebenaran laporan. Perubahan halaman atau gangguan layanan BKN dapat memerlukan pemeriksaan manual.</p></div>
+<nav class="bottom-links" aria-label="Halaman terkait"><a href="asisten-ekinerja.html">← Ringkasan ekstensi</a><a href="asisten-ekinerja-privasi.html">Kebijakan privasi</a><a href="asisten-ekinerja-ketentuan.html">Ketentuan penggunaan</a><a href="#main-content">Kembali ke atas ↑</a></nav>
+</main>
+<footer class="footer"><div class="wrap"><span>© <span id="year"></span> Nurhadi.</span><span><a href="mailto:hadi4us@gmail.com">hadi4us@gmail.com</a></span></div></footer>
+<script src="../assets/portfolio.js" defer></script>
+</body>
+</html>
