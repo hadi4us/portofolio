@@ -160,3 +160,21 @@ h2 { font:700 clamp(2rem,3.4vw,3.1rem)/1.05 "Source Serif 4",Georgia,serif; lett
   .cookie-consent__actions { margin-top:16px; display:grid; grid-template-columns:1fr 1fr; }
   .cookie-consent__actions .button { justify-content:center; font-size:.78rem; padding:0 8px; }
 }
+
+/* Optional appreciation links: placed after the content, with no interruption. */
+.support-placement { padding-top:12px; padding-bottom:56px; }
+.support-note { display:grid; grid-template-columns:minmax(0,1fr) auto; align-items:center; gap:30px; padding:30px 32px; border:1px solid var(--line); border-radius:var(--radius); background:linear-gradient(115deg,#f0f7f7,#fbfcfd); margin:0; }
+.support-note__eyebrow { display:block; color:var(--blue); font-size:.7rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; margin-bottom:10px; }
+.support-note h2 { margin:0 0 12px; font:700 clamp(1.35rem,2.4vw,1.8rem)/1.2 "Source Serif 4",Georgia,serif; letter-spacing:-.025em; }
+.support-note p { margin:0 0 10px; max-width:640px; color:var(--muted); font-size:.9rem; line-height:1.7; }
+.support-note small { display:block; max-width:640px; color:var(--muted); font-size:.75rem; line-height:1.6; }
+.support-note__actions { display:flex; flex-direction:column; align-items:center; gap:12px; }
+.support-note .button.secondary { background:var(--white); border-color:#b6c9cf; white-space:nowrap; font-size:.84rem; text-decoration:none; }
+.support-note__feedback { color:var(--blue-deep); font-size:.8rem; text-decoration:underline; text-underline-offset:3px; }
+.support-note--guide { margin-top:34px; padding:24px; grid-template-columns:minmax(0,1fr); gap:18px; }
+.support-note--guide .support-note__actions { flex-direction:row; flex-wrap:wrap; align-items:center; gap:18px; }
+.support-footer { max-width:420px; }
+.support-footer small { display:block; margin-top:4px; font-size:.7rem; line-height:1.6; }
+@media(max-width:800px) { .support-note { grid-template-columns:minmax(0,1fr); gap:20px; padding:24px; } .support-note__actions { align-items:flex-start; } .support-placement { padding-bottom:40px; } }
+@media(max-width:420px) { .support-note { padding:20px; } .support-note .button.secondary { white-space:normal; } }
+@media print { .support-placement,.support-note,.support-footer { display:none; } }
