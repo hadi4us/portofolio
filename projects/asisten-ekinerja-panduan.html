@@ -61,17 +61,17 @@
 <div class="eyebrow">Asisten e-Kinerja · Panduan pengguna</div>
 <h1>Dari spreadsheet ke <em>pengisian yang lebih tertata.</em></h1>
 <p class="lead">Ikuti langkah dari menyiapkan kegiatan, menghubungkan Google Sheets atau memilih Excel/CSV, sampai menjalankan pengisian dan memeriksa hasilnya di e-Kinerja BKN.</p><p class="value-bridge">Lihat cara kerjanya, ambil yang berguna, lalu <a href="#dukung-karya">Traktir Nurhadi!</a></p>
-<p class="meta">Versi acuan <strong>0.5.9</strong> · Diperbarui <time datetime="2026-10-18">18 Oktober 2026</time>. Versi yang tersedia di Web Store dapat berbeda selama pembaruan ditinjau.</p>
+<p class="meta">Versi acuan <strong>0.5.9</strong> · Diperbarui <time datetime="2026-10-19">19 Oktober 2026</time>. Versi yang tersedia di Web Store dapat berbeda selama pembaruan ditinjau.</p>
 <div class="quickstart">
 <h2>Sudah memasang ekstensi?</h2>
 <ol><li>Buka dan login ke <strong>e-Kinerja BKN</strong>, lalu klik ikon ekstensi saat tab BKN aktif.</li><li>Pilih <strong>Google Sheets</strong>. Jika diminta, klik <strong>Hubungkan Google</strong> dan berikan izin baca. Akun yang masih terhubung tidak mendapat dialog koneksi lagi.</li><li>Masukkan tautan dan nama tab, klik <strong>Ambil data kegiatan</strong>, pilih rentang, lalu centang pernyataan pemeriksaan dan klik <strong>Mulai / lanjutkan</strong>.</li></ol>
 </div>
-<div class="actions"><a class="button primary" href="https://kinerja.bkn.go.id/skp" target="_blank" rel="noopener noreferrer">Buka e-Kinerja BKN ↗</a><a class="button secondary" href="#format">Lihat format template</a></div>
+<div class="actions"><a class="button primary" href="https://chromewebstore.google.com/detail/aeejcjojjeigdhfpkhmmdmjdnnkfplha?utm_source=item-share-cb" target="_blank" rel="noopener noreferrer">Pasang di Chrome ↗</a><a class="button secondary" href="../downloads/Template_Kinerja_Harian.xlsx" download>Unduh template Excel ↓</a></div><p><a href="https://kinerja.bkn.go.id/skp" target="_blank" rel="noopener noreferrer">Buka e-Kinerja BKN ↗</a> · <a href="#format">Lihat format template</a></p>
 <nav class="toc" aria-label="Daftar isi panduan"><strong>Pilih bagian yang Anda butuhkan</strong><ul><li><a href="#pasang">1. Pemasangan dan persiapan</a></li><li><a href="#google">2. Menghubungkan Google Sheets</a></li><li><a href="#excel">3. Menggunakan Excel/CSV</a></li><li><a href="#format">4. Format template A:H</a></li><li><a href="#jalan">5. Menjalankan dan memeriksa hasil</a></li><li><a href="#laporan">6. Laporan dan pengaturan</a></li><li><a href="#masalah">7. Masalah umum</a></li><li><a href="#pengelola">8. Catatan untuk pengelola</a></li></ul></nav>
 
 <section aria-labelledby="pasang">
 <h2 id="pasang">1. Pemasangan dan persiapan</h2>
-<ol><li>Pasang <strong>Asisten Input e-Kinerja</strong> dari listing Chrome Web Store yang dibagikan pengelola. Pastikan nama ekstensi dan pengembangnya sesuai. Jika sudah terpasang, periksa nomor versi pada panel.</li><li>Login sendiri ke <a href="https://kinerja.bkn.go.id/" target="_blank" rel="noopener noreferrer">aplikasi e-Kinerja BKN</a>. Buka SKP yang ingin diisi.</li><li>Klik ikon ekstensi <strong>pada tab BKN yang aktif</strong>. Ekstensi mencoba membuka menu SKP dan formulir Isi Kinerja Harian; pilih sendiri SKP/periode jika halaman meminta pilihan.</li><li>Jika ikon diklik di luar situs BKN, halaman mulai akan tampil. Klik <strong>Buka e-Kinerja BKN</strong>, lalu klik kembali ikon pada tab tersebut.</li></ol>
+<ol><li>Pasang <strong>Asisten Input e-Kinerja</strong> dari <a href="https://chromewebstore.google.com/detail/aeejcjojjeigdhfpkhmmdmjdnnkfplha?utm_source=item-share-cb" target="_blank" rel="noopener noreferrer">Chrome Web Store</a>. Pastikan nama ekstensi dan pengembangnya sesuai. Jika sudah terpasang, periksa nomor versi pada panel.</li><li>Login sendiri ke <a href="https://kinerja.bkn.go.id/" target="_blank" rel="noopener noreferrer">aplikasi e-Kinerja BKN</a>. Buka SKP yang ingin diisi.</li><li>Klik ikon ekstensi <strong>pada tab BKN yang aktif</strong>. Ekstensi mencoba membuka menu SKP dan formulir Isi Kinerja Harian; pilih sendiri SKP/periode jika halaman meminta pilihan.</li><li>Jika ikon diklik di luar situs BKN, halaman mulai akan tampil. Klik <strong>Buka e-Kinerja BKN</strong>, lalu klik kembali ikon pada tab tersebut.</li></ol>
 <div class="note"><p><strong>Pengguna tidak perlu membuat proyek Google Cloud, OAuth Client ID, atau mengubah manifest.json.</strong> Konfigurasi aplikasi disiapkan oleh pengelola. Setiap pengguna hanya menghubungkan akun Google miliknya jika ingin membaca Sheets secara langsung.</p></div>
 <p>Periksa akun BKN, nama SKP, periode penilaian, dan kegiatan aktual. Gunakan satu instalasi ekstensi dan satu proses aktif untuk target SKP yang sama.</p>
 </section>
@@ -85,7 +85,7 @@
 </section>
 
 <section aria-labelledby="excel">
-<h2 id="excel">3. Menggunakan Excel/CSV</h2>
+<h2 id="excel">3. Menggunakan Excel/CSV</h2><div class="actions"><a class="button secondary" href="../downloads/Template_Kinerja_Harian.xlsx" download>Unduh template Excel ↓</a></div><p><a href="../downloads/Template_Kinerja_Harian.csv" download>Unduh versi CSV</a>. Isi kegiatan pada lembar <strong>Data</strong>; lembar Contoh hanya untuk referensi. Template ini juga dapat diunggah ke Google Drive lalu dibuka dengan Google Sheets.</p>
 <ol><li>Pilih <strong>Excel / CSV</strong> pada Sumber kegiatan.</li><li>Pilih file <code>.xlsx</code>, <code>.csv</code>, atau <code>.tsv</code> dengan header baku. Data akan dibaca setelah file dipilih.</li><li>Periksa jumlah kegiatan, rentang tanggal, dan pratinjau. Jika file diperbarui, pilih ulang file terbaru.</li></ol>
 <p>Alternatif tanpa OAuth: buka <strong>Pengaturan lanjutan → Tempel data Google Sheets tanpa OAuth</strong>, salin A1:H beserta header, tempel, lalu klik <strong>Gunakan data tempelan</strong>. Excel/CSV dan tempelan tidak memerlukan koneksi Google.</p>
 </section>
@@ -150,3 +150,4 @@
 <script src="../assets/portfolio.js" defer></script>
 </body>
 </html>
+
