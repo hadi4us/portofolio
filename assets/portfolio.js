@@ -11,13 +11,14 @@
     ['Karya', home + '#inovasi'],
     ['Cara kerja', home + '#pendekatan'],
     ['Tentang', home + '#tentang'],
+    ['Branding', root + 'branding.html'],
     ['Wawasan', root + 'asisten-ai.html'],
     ['Kontak', home + '#kontak']
   ];
   var linksEl = nav.querySelector('.navlinks');
   if (!linksEl) return;
   linksEl.innerHTML = links.map(function(item, i) {
-    return '<a' + (i === 4 ? ' class="contact"' : '') + ' href="' + item[1] + '">' + item[0] + '</a>';
+    return '<a' + (item[0] === 'Kontak' ? ' class="contact"' : '') + ' href="' + item[1] + '">' + item[0] + '</a>';
   }).join('');
 })();
 

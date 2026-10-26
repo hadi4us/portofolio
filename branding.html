@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Lembar kerja branding Nurhadi untuk merumuskan identitas, pesan, warna, tipografi, dan aset visual.">
+  <meta property="og:title" content="Branding | Portofolio Nurhadi">
+  <meta property="og:description" content="Lembar kerja identitas brand untuk merumuskan pesan dan arah visual.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hadi4us.github.io/portofolio/branding.html">
+  <meta property="og:image" content="https://hadi4us.github.io/portofolio/og-image.png">
+  <link rel="canonical" href="https://hadi4us.github.io/portofolio/branding.html">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <title>Branding | Portofolio Nurhadi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/portfolio.css">
+  <link rel="stylesheet" href="assets/branding.css">
+</head>
+<body data-asset-prefix="">
+  <a class="skip-link" href="#main-content">Lewati ke konten utama</a>
+  <header class="wrap"><nav class="nav" aria-label="Navigasi utama"><a class="brand" href="index.html">nurhadi<i>.</i></a><div class="navlinks"></div></nav></header>
+  <main id="main-content">
+    <section class="brand-hero"><div class="wrap"><div class="eyebrow">Lembar kerja identitas</div><h1>Isi fondasi <em>branding</em> di satu tempat.</h1><p class="lede">Gunakan halaman ini untuk merumuskan nama, pesan, karakter, warna, tipografi, dan aset visual. Draf tersimpan di browser ini; belum dikirim ke server.</p></div></section>
+    <section class="section white"><div class="wrap brand-layout">
+      <form id="brand-form" class="brand-form">
+        <div class="form-heading"><div class="eyebrow">01 / Identitas</div><h2>Brand ingin dikenal sebagai apa?</h2></div>
+        <label>Nama brand<input name="brandName" autocomplete="off" placeholder="Contoh: Nurhadi Digital" required></label>
+        <label>Tagline<input name="tagline" autocomplete="off" placeholder="Kalimat pendek yang mudah diingat"></label>
+        <label>Deskripsi singkat<textarea name="description" rows="4" placeholder="Apa yang dibuat, untuk siapa, dan nilai apa yang ditawarkan?"></textarea></label>
+        <label>Karakter brand<select name="tone"><option value="">Pilih karakter</option><option>Tenang dan tepercaya</option><option>Praktis dan dekat</option><option>Tegas dan berorientasi data</option><option>Eksploratif dan futuristik</option></select></label>
+        <div class="form-heading"><div class="eyebrow">02 / Arah visual</div><h2>Bagaimana brand terlihat?</h2></div>
+        <div class="color-grid"><label>Warna utama<input name="primaryColor" type="color" value="#086b87"></label><label>Warna aksen<input name="accentColor" type="color" value="#dcad46"></label><label>Warna teks<input name="inkColor" type="color" value="#102236"></label></div>
+        <label>Tipografi<input name="typeface" autocomplete="off" placeholder="Contoh: DM Sans + Source Serif 4"></label>
+        <label>Logo atau aset visual<input name="logo" type="file" accept="image/png,image/jpeg,image/svg+xml,image/webp"><small>Preview lokal saja. File tidak diunggah.</small></label>
+        <div class="form-heading"><div class="eyebrow">03 / Aksi</div><h2>Ke mana audiens diarahkan?</h2></div>
+        <label>Label tombol CTA<input name="ctaLabel" autocomplete="off" placeholder="Contoh: Mari berdiskusi"></label>
+        <label>Tujuan CTA<input name="ctaUrl" type="url" autocomplete="off" placeholder="https://... atau mailto:..."></label>
+        <div class="form-actions"><button class="button primary" type="submit">Simpan draf</button><button class="button secondary" type="button" id="clear-draft">Kosongkan</button><span id="draft-status" role="status" aria-live="polite"></span></div>
+      </form>
+      <aside class="brand-preview" aria-label="Preview branding"><div class="preview-label">Preview</div><div id="logo-preview" class="logo-placeholder">Logo</div><div class="preview-card"><div class="eyebrow">Identitas brand</div><h2 id="preview-name">Nama brand</h2><p id="preview-tagline">Tagline akan muncul di sini.</p><p id="preview-description" class="preview-description">Deskripsi singkat brand tampil di area ini.</p><div class="preview-swatches"><span id="swatch-primary"></span><span id="swatch-accent"></span><span id="swatch-ink"></span></div><div class="preview-meta"><span id="preview-tone">Karakter belum dipilih</span><span id="preview-typeface">Tipografi belum diisi</span></div><a id="preview-cta" class="button primary" href="#">CTA brand</a></div></aside>
+    </div></section>
+    <section class="section"><div class="wrap brand-notes"><div><div class="eyebrow">Catatan penggunaan</div><h2>Isi yang perlu diputuskan.</h2></div><ul><li>Nama dan tagline harus mudah dibaca tanpa penjelasan tambahan.</li><li>Warna perlu diuji pada latar terang dan gelap.</li><li>Logo final, font berlisensi, dan pedoman penggunaan dapat ditambahkan setelah arah dasar disepakati.</li></ul></div></section>
+  </main>
+  <footer class="footer"><div class="wrap"><span>© <span id="year"></span> Nurhadi.</span><span>Draf branding tersimpan lokal di browser.</span></div></footer>
+  <script src="assets/portfolio.js" defer></script>
+  <script src="assets/branding.js" defer></script>
+</body>
+</html>
