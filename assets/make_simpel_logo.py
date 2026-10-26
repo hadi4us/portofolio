@@ -3,7 +3,7 @@ W=H=120
 bg=(16,34,54,255)
 pix=[[bg for _ in range(W)] for _ in range(H)]
 def setp(x,y,c):
-    if 0<=x<W and 0<=y<H: pix[y][x]=(*c,255)
+    if 0<=x<W and 0<=y<H: pix[y][x]=c if len(c)==4 else (*c,255)
 def circle(cx,cy,r,c):
     for y in range(cy-r,cy+r+1):
         for x in range(cx-r,cx+r+1):
